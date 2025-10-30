@@ -1,11 +1,11 @@
-import { Page } from '@playwright/test';
-import { LoginLocators } from '../locators/LoginLocators';
+import { Page } from "@playwright/test";
+import { LoginLocators } from "../locators/LoginLocators";
 
-export class LoginPage {
+export class LogInPage {
   constructor(private page: Page) {}
 
   async goTo() {
-    await this.page.goto('/login');
+    await this.page.goto("/login");
   }
 
   async fillUsername(username: string) {
@@ -21,7 +21,8 @@ export class LoginPage {
   }
 
   async getErrorMessage() {
-    return this.page.locator(LoginLocators.errorMessage);
+    const errorMessage = this.page.locator(LoginLocators.errorMessage);
+    await errorMessage.waitFor({ state: "visible", timeout: 3000 });
+    return errorMessage;
   }
-
 }
