@@ -21,7 +21,17 @@ export class LoginPage {
   }
 
   async getErrorMessage() {
-    return this.page.locator(LoginLocators.errorMessage);
+    const errorMessage = this.page.locator(LoginLocators.errorMessage);
+    await errorMessage.waitFor({state: 'visible', timeout: 5000});
+    return errorMessage.innerText();
   }
 
+  async isUserLoggedIn() {
+    const userMenu = this.page.locator(LoginLocators.userMenu);
+    return userMenu.isVisible();
+  }
+
+  async getCurrentUrl() {
+    return this.page.url();
+  }
 }
