@@ -1,6 +1,6 @@
 import { expect, test } from "../../fixtures/NotificationsPageFixture";
 
-test("TC001: Verify that a notification can be downloaded as a PDF", async ({
+test("TC009: Verify that a notification can be downloaded as a PDF", async ({
   notificationPage,
 }) => {
   await notificationPage.goto();

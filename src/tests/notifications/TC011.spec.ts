@@ -1,6 +1,6 @@
 import { expect, test } from "../../fixtures/NotificationsPageFixture";
 
-test("TC001: Verify that a notification can be downloaded as a PDF", async ({
+test("TC011: Verify that a notification can set a reminder", async ({
   notificationPage,
 }) => {
   await notificationPage.goto();
@@ -9,6 +9,7 @@ test("TC001: Verify that a notification can be downloaded as a PDF", async ({
   await notificationPage.clickAllButton();
   await notificationPage.clickFirstNotification();
   await notificationPage.clickMoreButton();
-  await notificationPage.generatePDF();
-  const download = await notificationPage.clickConfirmationButton();
+  await notificationPage.clickSetReminderButton();
+  await notificationPage.selectReminderTomorrow();
+  await notificationPage.clickConfirmationButton();
 });
