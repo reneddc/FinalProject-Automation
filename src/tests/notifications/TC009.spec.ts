@@ -1,9 +1,14 @@
-import { expect, test } from "../../fixtures/NotificationsPageFixture";
+import { mergeTests } from "@playwright/test";
+import { expect } from "../../fixtures/LoginPageFixture";
+import { test as loggedInTest } from "../../fixtures/LoggedInFixture";
+import { test as notificationPage } from "../../fixtures/NotificationsPageFixture";
+
+const test = mergeTests(loggedInTest, notificationPage);
 
 test("TC009: Verify that a notification can be downloaded as a PDF", async ({
   notificationPage,
 }) => {
-  await notificationPage.goto();
+  await notificationPage.goTo();
   await notificationPage.clickNotificationButton();
   await notificationPage.waitForNotificationContainer(2000);
   await notificationPage.clickAllButton();

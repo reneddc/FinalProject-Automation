@@ -3,7 +3,7 @@ import { expect, test } from "../../fixtures/NotificationsPageFixture";
 test("TC011: Verify that a notification can set a reminder", async ({
   notificationPage,
 }) => {
-  await notificationPage.goto();
+  await notificationPage.goTo();
   await notificationPage.clickNotificationButton();
   await notificationPage.waitForNotificationContainer(2000);
   await notificationPage.clickAllButton();

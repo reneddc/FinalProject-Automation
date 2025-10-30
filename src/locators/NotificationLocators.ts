@@ -8,5 +8,8 @@ export const NotificationLocators = {
   allButton: "//segmented-control[1]//ul[1]//li[2]",
   allContainer:
     '//cdk-virtual-scroll-viewport[@class="cdk-virtual-scroll-viewport op-ian-center--viewport cdk-virtual-scrollable cdk-virtual-scroll-orientation-vertical"]',
-  firstNotification: "//op-in-app-notification-entry[1]",
+  firsAlltNotification: "//op-in-app-notification-entry[1]",
+  threeDotMenu: 'button[title="More"]',
+  optionGeneratePDF: 'a[aria-label="Generate PDF"]',
+  confirmationButton: 'button[type="submit"]',
 };
