@@ -1,6 +1,6 @@
 import { expect, test } from "../../fixtures/LoginPageFixture";
 
-test.only('TC001: Verify login with invalid account', async ({ loginPage }) => {
+test('TC001: Verify login with invalid account', async ({ loginPage }) => {
   await loginPage.goTo();
   await loginPage.fillUsername('non-existentusername');
   await loginPage.fillPassword('somepassword');
