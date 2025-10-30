@@ -1,12 +1,11 @@
-import { test as base } from '@playwright/test';
-import { LoginPage } from '../pages/LoginPage';
+import { test as base } from "@playwright/test";
+import { LogInPage } from "../pages/LoginPage";
 
-
-export const test = base.extend<{ loginPage: LoginPage }>({
-  loginPage: async ({ page }, use) => {
-    const loginPage = new LoginPage(page);
-    await use(loginPage);
+export const test = base.extend<{ logInPage: LogInPage }>({
+  logInPage: async ({ page }, use) => {
+    const logInPage = new LogInPage(page);
+    await use(logInPage);
   },
 });
 
-export { expect } from '@playwright/test';
+export { expect } from "@playwright/test";
