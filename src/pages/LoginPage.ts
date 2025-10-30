@@ -5,11 +5,11 @@ export class LoginPage {
   constructor(private page: Page) {}
 
   async goto() {
-    await this.page.goto('/login');
+    await this.page.goto('https://automationassuresoft2025ad.openproject.com/login');
   }
 
   async fillUsername(username: string) {
-    await this.page.locator(LoginLocators.emailInput).fill(username);
+    await this.page.locator(LoginLocators.usernameInput).fill(username);
   }
 
   async fillPassword(password: string) {
@@ -20,9 +20,16 @@ export class LoginPage {
     await this.page.locator(LoginLocators.loginButton).click();
   }
 
-async getToastErrorMessage(timeout = 5000) {
-  const toast = this.page.locator(LoginLocators.toastErrorContainer);
-  await toast.waitFor({ state: 'visible', timeout });
-  return this.page.locator(LoginLocators.toastErrorDescription).innerText();
-}
+  async getErrorMessage() {
+    return this.page.locator(LoginLocators.errorMessage).innerText();
+  }
+
+  async isUserLoggedIn() {
+    const userMenu = this.page.locator(LoginLocators.userMenu);
+    return userMenu.isVisible();
+  }
+
+  async getCurrentUrl() {
+    return this.page.url();
+  }
 }

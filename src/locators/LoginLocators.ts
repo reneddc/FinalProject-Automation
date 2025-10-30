@@ -1,7 +1,10 @@
 export const LoginLocators = {
-  emailInput: '#normal_login_email',
-  passwordInput: '#normal_login_password',
-  loginButton: 'button.login-form-button',
-  toastErrorContainer: '.ant-notification-notice-error',
-  toastErrorDescription: '.ant-notification-notice-description',
+  usernameInput: '#username',
+  passwordInput: '#password',
+  loginButton: '#login-form input[type="submit"]',
+  forgotPasswordLink: 'a[href="/account/lost_password"]',
+  errorMessage: 'main p:has-text("Invalid user or password")',
+  // Success indicators
+  homeLink: 'a[href="/"]',
+  userMenu: '.op-app-header--user-menu',
 };
