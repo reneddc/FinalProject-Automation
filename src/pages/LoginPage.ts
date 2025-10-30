@@ -4,12 +4,12 @@ import { LoginLocators } from '../locators/LoginLocators';
 export class LoginPage {
   constructor(private page: Page) {}
 
-  async goto() {
+  async goTo() {
     await this.page.goto('/login');
   }
 
   async fillUsername(username: string) {
-    await this.page.locator(LoginLocators.emailInput).fill(username);
+    await this.page.locator(LoginLocators.usernameInput).fill(username);
   }
 
   async fillPassword(password: string) {
@@ -20,9 +20,8 @@ export class LoginPage {
     await this.page.locator(LoginLocators.loginButton).click();
   }
 
-async getToastErrorMessage(timeout = 5000) {
-  const toast = this.page.locator(LoginLocators.toastErrorContainer);
-  await toast.waitFor({ state: 'visible', timeout });
-  return this.page.locator(LoginLocators.toastErrorDescription).innerText();
-}
+  async getErrorMessage() {
+    return this.page.locator(LoginLocators.errorMessage);
+  }
+
 }

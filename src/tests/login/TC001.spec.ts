@@ -1,14 +1,12 @@
-import { expect, test } from "../../fixtures/NotificationsPageFixture";
+import { expect, test } from "../../fixtures/LoginPageFixture";
 
-test("TC001: Verify that a notification can be downloaded as a PDF", async ({
-  notificationPage,
-}) => {
-  await notificationPage.goto();
-  await notificationPage.clickNotificationButton();
-  await notificationPage.waitForNotificationContainer(2000);
-  await notificationPage.clickAllButton();
-  await notificationPage.clickFirstNotification();
-  await notificationPage.clickMoreButton();
-  await notificationPage.generatePDF();
-  const download = await notificationPage.clickConfirmationButton();
+test("TC001: Verify login with invalid account", async ({ loginPage }) => {
+  await loginPage.goTo();
+  await loginPage.fillUsername("non-existentusername");
+  await loginPage.fillPassword("somepassword");
+  await loginPage.clickLoginButton();
+  expect(await loginPage.getErrorMessage()).toBeVisible();
+  expect(await loginPage.getErrorMessage()).toContainText(
+    "Invalid user or password or the account is blocked due to multiple failed login attempts. If so, it will be unblocked automatically in a short time."
+  );
 });
