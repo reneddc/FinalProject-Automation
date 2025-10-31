@@ -1,5 +1,5 @@
 import { mergeTests } from "@playwright/test";
-import { expect } from "../../fixtures/LoginPageFixture";
+import { expect } from "../../fixtures/LogInPageFixture";
 import { test as loggedInTest } from "../../fixtures/LoggedInFixture";
 import { test as notificationPage } from "../../fixtures/NotificationsPageFixture";
 
