@@ -20,29 +20,9 @@ test("TC021: Verify work package creation with valid values from PACKAGE table",
   await workPackagesPage.clickCreateNewWorkPackageButton();
   await workPackagesPage.waitForNewRowInTable(timeWaiter);
   await workPackagesPage.fillTaskNameInputFromTable(taskName);
-  /*await workPackagesPage.clickSelectPackageTypeFromTable();
-  await workPackagesPage.waitForPackageTypesContainerFromTable(timeWaiter);
-  await workPackagesPage.clickTaskTypeOptionFromTable();*/
   await workPackagesPage.clickSelectProjectFromTable();
   await workPackagesPage.waitForProjectsContainerFromTable(timeWaiter);
   await workPackagesPage.selectProjectOptionFromTable();
-
-
- /* await workPackagesPage.clickAddWorkPackageButton(timeWaiter);
-  await workPackagesPage.waitForPackageTypesContainer(timeWaiter);
-  await workPackagesPage.clickTaskTypeOption();
-  await newPackagePopUpComponent.waitForFormContainer(timeWaiter);
-  await newPackagePopUpComponent.fillTaskNameInput(taskName);
-  await newPackagePopUpComponent.clickSelectProjectInput();
-  await newPackagePopUpComponent.waitForProjectsContainer(timeWaiter);
-  await newPackagePopUpComponent.selectProjectOption();
-  await newPackagePopUpComponent.clickPriorityDropDown();
-  await newPackagePopUpComponent.waitForPriorityContainer(timeWaiter);
-  await newPackagePopUpComponent.clickNormalPriorityOption();
-  await newPackagePopUpComponent.setAttachmentFile(imagePath);//This is a particular step
-  await newPackagePopUpComponent.waitForPopUpClosed(30000);
-  await newPackagePopUpComponent.clickSaveButton();
-  await newPackagePopUpComponent.clickClosePopUpButton();*/
   await headerComponent.fillSearchInput(taskName);
   await searchResultsPage.waitForSearchResultsTable(10000);
   const isTaskCreatedInTable = await searchResultsPage.isTaskCreatedInTable(taskName);

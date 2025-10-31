@@ -13,4 +13,14 @@ export class SearchResultsPage {
     const coincidences = this.page.locator(searchResultsLocators.searchResultsTable).getByText(taskName, { exact: false });
     return await coincidences.count() > 0;
   }
+
+  async clickfirstRowThreePoints(){
+    await this.page.locator(searchResultsLocators.firstRowThreePoints).first().click();
+  }
+
+  async clickMoveToProjectOption(timeWaiter:number){
+    const moveToAnotherProjectOption = this.page.locator(searchResultsLocators.moveToAnotherProjectOption);
+    await moveToAnotherProjectOption.waitFor({ state: "visible", timeout: timeWaiter});
+    moveToAnotherProjectOption.click();
+  }
 }
