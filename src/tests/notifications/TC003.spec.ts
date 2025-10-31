@@ -5,7 +5,7 @@ import { test as notificationPage } from "../../fixtures/NotificationsPageFixtur
 
 const test = mergeTests(loggedInTest, notificationPage);
 
-test("TC011: Verify that a notification can set a reminder", async ({
+test("TC003: Verify that a tag in a notification can be updated successfully", async ({
   notificationPage,
   page,
 }) => {
@@ -13,8 +13,8 @@ test("TC011: Verify that a notification can set a reminder", async ({
   await notificationPage.clickNotificationButton();
   await notificationPage.clickAllButton();
   await notificationPage.clickFirstNotification();
-  await notificationPage.clickSetReminderButton();
-  await notificationPage.clickConfirmReminder();
-  const successMesage = await notificationPage.getSuccessReminderMessage();
-  expect(successMesage).toBeTruthy();
+  await notificationPage.clickDropDownTag();
+  await notificationPage.selectOnHoldTag();
+  const tagName = await notificationPage.getTagText();
+  expect(tagName).toBe("On hold");
 });
