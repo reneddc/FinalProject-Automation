@@ -38,4 +38,19 @@ export class SearchResultsPage {
   async clickDeleteConfirmButton(){
     this.page.locator('button', { hasText: searchResultsLocators.deleteConfirmButton }).click();
   }
+
+  async clickGeneratePDFOption(timeWaiter:number){
+    const generatePDFOption = this.page.locator(searchResultsLocators.generatePDFOption);
+    await generatePDFOption.waitFor({ state: "visible", timeout: timeWaiter});
+    generatePDFOption.click();
+  }
+
+  async waitForGeneratePDFModal(timeWaiter:number){
+    const generatePDFModal = this.page.locator(searchResultsLocators.generatePDFModal);
+    await generatePDFModal.waitFor({ state: "visible", timeout: timeWaiter });
+  }
+
+  async clickDownloadPDFButton(){
+    await this.page.locator('button', { hasText: searchResultsLocators.downloadPDFButton }).click();
+  }
 }

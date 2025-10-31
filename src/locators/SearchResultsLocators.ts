@@ -4,5 +4,8 @@ export const searchResultsLocators = {
   moveToAnotherProjectOption: 'Move to another project',
   deleteOption: 'Delete',
   deleteModal: '#wp_destroy_modal',
-  deleteConfirmButton: 'Delete'
+  deleteConfirmButton: 'Delete',
+  generatePDFOption: 'Delete',
+  generatePDFModal: '#op-work-package-generate-pdf-dialog',
+  downloadPDFButton: 'Download'
 };
