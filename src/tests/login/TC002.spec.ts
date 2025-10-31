@@ -1,9 +1,9 @@
-import { expect, test } from "../../fixtures/LoginPageFixture";
+import { expect, test } from "../../fixtures/LogInPageFixture";
 
 test.describe('Login - Positive Test Cases', () => {
-  test('TC002: Verify successful login with valid credentials', async ({ loginPage, page }) => {
+  test('TC002: Verify successful login with valid credentials', async ({ logInPage, page }) => {
     // Navigate to login page
-    await loginPage.goTo();
+    await logInPage.goTo();
 
     // Get credentials from environment variables
     const username = process.env.USER_EMAIL;
@@ -16,17 +16,17 @@ test.describe('Login - Positive Test Cases', () => {
     console.log('Using credentials:', { username, password: '***' });
 
     // Fill login form with valid credentials
-    await loginPage.fillUsername(username!);
-    await loginPage.fillPassword(password!);
+    await logInPage.fillUsername(username!);
+    await logInPage.fillPassword(password!);
 
     // Click login button
-    await loginPage.clickLoginButton();
+    await logInPage.clickLoginButton();
 
     // Wait a bit for the page to respond
     await page.waitForTimeout(5000);
 
     // Check current URL and page state
-    const currentUrl = await loginPage.getCurrentUrl();
+    const currentUrl = await logInPage.getCurrentUrl();
     console.log('Current URL after login:', currentUrl);
 
     // Check if there's an error message

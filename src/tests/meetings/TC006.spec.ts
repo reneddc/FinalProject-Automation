@@ -13,7 +13,7 @@ test("TC006 Verify one-time meeting creation and deletion", async ({
   await (await meetingsPage.getOneTimeButton()).click();
   await meetingsPage.selectProjectByIndex("Demo project");
   await meetingsPage.fillTitle("Meeting Title");
-  await (await meetingsPage.getCreateMeetingButton()).click();
+  await (await meetingsPage.getCreateOneTimeMeetingButton()).click();
   await meetingsPage.goTo();
   await meetingsPage.page.reload({ waitUntil: "load" });
   expect(await meetingsPage.getMeetingCreated("Meeting Title")).toBeVisible();
