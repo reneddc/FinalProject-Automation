@@ -12,4 +12,15 @@ export const NotificationLocators = {
   optionGeneratePDF: 'a[aria-label="Generate PDF"]',
   confirmationButton: 'button[type="submit"]',
   moreButton: 'button[title="More"]',
+  setReminderButton: '//button[@title="Set reminder"]',
+  //dropDownReminder: "reminder-dropdown-menu",
+  //optionReminderTomorrow: 'button[aria-label="Tomorrow"]',
+  successMesageReminderContainer:
+    '//div[@class="Banner flash Banner--success flash-success"]',
+  successMessage: '//p[@class="Banner-title"]',
+  modalSetReminderContainer:
+    '//div[@class="spot-modal op-reminder-dialog-modal"]',
+  createReminderButton:
+    '//button[@class="Button--primary Button--medium Button"]',
+  duplicateNotificationOption: '//a[@aria-label="Duplicate"]',
 };
