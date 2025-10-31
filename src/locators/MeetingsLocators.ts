@@ -7,5 +7,6 @@ export const MeetingsLocators = {
   sideMeetingsMenuButtons: '.op-submenu--item-action',
   recurringMeetingTitle: '.PageHeader-title',
   recurringMeetingOptionsButton: '.PageHeader-actions .octicon-kebab-horizontal',
-  checkDeleteConfirmationButton: '#delete-recurring-meeting-dialog-check_box'
+  checkDeleteConfirmationButton: '#delete-recurring-meeting-dialog-check_box',
+  errorMessage: '.FormControl-inlineValidation'
 };

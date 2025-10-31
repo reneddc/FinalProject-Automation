@@ -78,4 +78,18 @@ export class MeetingsPage {
   async getDeletePermanentlyButton() {
     return this.page.getByText("Delete permanently", { exact: true });  
   }
+
+  async getCancelMeetingButton() {
+    return this.page.getByText("Cancel", { exact: true });
+  }
+
+  async getTitleErrorMessage() {
+    return this.page.locator(MeetingsLocators.errorMessage).filter({ hasText: "Title can't be blank." });
+  }
+
+  async getProjectErrorMessage() {
+    return this.page.locator(MeetingsLocators.errorMessage).filter({ hasText: "Project can't be blank." });
+  }
 }
+
+
