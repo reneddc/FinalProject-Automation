@@ -23,4 +23,19 @@ export class SearchResultsPage {
     await moveToAnotherProjectOption.waitFor({ state: "visible", timeout: timeWaiter});
     moveToAnotherProjectOption.click();
   }
+
+  async clickDeleteOption(timeWaiter:number){
+    const deleteOption = this.page.locator(searchResultsLocators.deleteOption);
+    await deleteOption.waitFor({ state: "visible", timeout: timeWaiter});
+    deleteOption.click();
+  }
+
+  async waitForDeleteModal(timeWaiter:number){
+    const deleteModal = this.page.locator(searchResultsLocators.deleteModal);
+    await deleteModal.waitFor({ state: "visible", timeout: timeWaiter });
+  }
+
+  async clickDeleteConfirmButton(){
+    this.page.locator('button', { hasText: searchResultsLocators.deleteConfirmButton }).click();
+  }
 }
