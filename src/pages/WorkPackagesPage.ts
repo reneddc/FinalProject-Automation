@@ -18,4 +18,11 @@ export class WorkPackagesPage {
   async clickTaskTypeOption() {
     this.page.getByRole('menuitem', { name: workPackagesLocators.taskTypeOption, exact: true }).click();
   }
+
+  async getErrorMessageToaster(timeWaiter:number) {
+    const errorMessageToaster = this.page.locator(workPackagesLocators.errorMessageToaster);
+    await errorMessageToaster.waitFor({ state: "visible", timeout: timeWaiter });
+    return errorMessageToaster;
+  }
+
 }
