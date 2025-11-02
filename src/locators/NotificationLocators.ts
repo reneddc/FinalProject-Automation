@@ -28,6 +28,7 @@ export const NotificationLocators = {
   commentInput: 'div[role="textbox"]',
   summitComment: 'button[value="Submit"]',
   dropDownTags: ".button--icon.icon-small.icon-pulldown",
+  inicialTag: 'button[title="New"]',
   optionOnHold: '//button[@aria-label="On hold"]',
   textTag: ".op-wp-status-button--text.button--text",
   priorityDropDown: ".ng-arrow-wrapper",

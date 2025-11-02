@@ -112,12 +112,20 @@ export class NotificationPage {
   }
 
   async clickDropDownTag() {
-    this.waitForEditForm();
+    await this.waitForEditForm();
     await this.page.locator(NotificationLocators.dropDownTags).click();
   }
 
   async selectOnHoldTag() {
-    await this.page.locator(NotificationLocators.optionOnHold).selectOption;
+    await this.page.locator(NotificationLocators.optionOnHold).click();
+  }
+
+  async selectOriginalTag() {
+    const tagName = await this.page.locator(NotificationLocators.dropDownTags)
+      .innerText;
+    await this.page
+      .locator(NotificationLocators.dropDownTags)
+      .selectOption(`text=${tagName}`);
   }
 
   async getTagText() {

@@ -18,3 +18,8 @@ test("TC003: Verify that a tag in a notification can be updated successfully", a
   const tagName = await notificationPage.getTagText();
   expect(tagName).toBe("On hold");
 });
+
+// test.afterEach(async ({ notificationPage }) => {
+//   await notificationPage.clickDropDownTag();
+//   await notificationPage.selectOriginalTag();
+// });
