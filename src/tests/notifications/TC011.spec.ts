@@ -17,4 +17,13 @@ test("TC011: Verify that a notification can set a reminder", async ({
   await notificationPage.clickConfirmReminder();
   const successMesage = await notificationPage.getSuccessReminderMessage();
   expect(successMesage).toBeTruthy();
+  expect(successMesage.length).toBeGreaterThan(0);
+  
+  // Verify success message contains expected text
+  const hasSuccessIndication = 
+    successMesage.toLowerCase().includes("reminder") || 
+    successMesage.toLowerCase().includes("created") ||
+    successMesage.toLowerCase().includes("success") ||
+    successMesage.toLowerCase().includes("set");
+  expect(hasSuccessIndication).toBeTruthy();
 });

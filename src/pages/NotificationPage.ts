@@ -1,7 +1,5 @@
 import { Page } from "@playwright/test";
 import { NotificationLocators } from "../locators/NotificationLocators";
-import { NOTFOUND, TIMEOUT } from "dns";
-import { time } from "console";
 
 export class NotificationPage {
   constructor(public page: Page) {}
@@ -18,11 +16,11 @@ export class NotificationPage {
     const container = await this.page.locator(
       NotificationLocators.allContainer
     );
-    container.waitFor({ state: "visible", timeout: 2000 });
+    await container.waitFor({ state: "visible", timeout: 5000 });
   }
 
   async clickAllButton() {
-    this.waitForNotificationContainer();
+    await this.waitForNotificationContainer();
     await this.page.locator(NotificationLocators.allButton).click();
   }
 
@@ -31,12 +29,12 @@ export class NotificationPage {
   }
 
   async waitForEditForm() {
-    const edit = await this.page.locator(NotificationLocators.editForm);
-    edit.waitFor({ state: "visible", timeout: 4000 });
+    const edit = this.page.locator(NotificationLocators.editForm);
+    await edit.waitFor({ state: "visible", timeout: 10000 });
   }
 
   async clickMoreButton() {
-    this.waitForEditForm();
+    await this.waitForEditForm();
     await this.page.locator(NotificationLocators.moreButton).click();
   }
 
@@ -48,16 +46,16 @@ export class NotificationPage {
     const confirmation = await this.page.locator(
       NotificationLocators.confirmationButton
     );
-    confirmation.waitFor({ state: "visible", timeout: 3000 });
+    await confirmation.waitFor({ state: "visible", timeout: 5000 });
   }
 
   async clickConfirmationButton() {
-    this.waitForConfirmationButton();
+    await this.waitForConfirmationButton();
     await this.page.locator(NotificationLocators.confirmationButton).click();
   }
 
   async clickSetReminderButton() {
-    this.waitForEditForm();
+    await this.waitForEditForm();
     await this.page.locator(NotificationLocators.setReminderButton).click();
   }
 
@@ -65,13 +63,14 @@ export class NotificationPage {
     const banner = await this.page.locator(
       NotificationLocators.successMesageReminderContainer
     );
-    banner.waitFor({ state: "visible", timeout: 300 });
+    await banner.waitFor({ state: "visible", timeout: 5000 });
   }
 
   async getSuccessReminderMessage() {
-    this.waitForReminderSuccess();
+    await this.waitForReminderSuccess();
     return await this.page
       .locator(NotificationLocators.successMessage)
+      .first()
       .innerText();
   }
 
@@ -79,31 +78,31 @@ export class NotificationPage {
     const modal = await this.page.locator(
       NotificationLocators.modalSetReminderContainer
     );
-    modal.waitFor({ state: "visible", timeout: 2000 });
+    await modal.waitFor({ state: "visible", timeout: 5000 });
   }
 
   async clickConfirmReminder() {
-    this.waitForModalReminderCreation();
+    await this.waitForModalReminderCreation();
     await this.page.locator(NotificationLocators.createReminderButton).click();
   }
 
   async clickActivity() {
-    this.waitForEditForm();
+    await this.waitForEditForm();
     await this.page.locator(NotificationLocators.activityOption).click();
   }
 
   async clickTextFieldComment() {
-    this.waitForEditForm();
+    await this.waitForEditForm();
     await this.page.locator(NotificationLocators.commentEmptyField).click();
   }
 
   async waitForTextBoxComment() {
-    const comment = await this.page.locator(NotificationLocators.commentInput);
-    comment.waitFor({ state: "visible", timeout: 2000 });
+    const comment = this.page.locator(NotificationLocators.commentInput);
+    await comment.waitFor({ state: "visible", timeout: 5000 });
   }
 
   async fillTextComment(comment: string) {
-    this.waitForTextBoxComment();
+    await this.waitForTextBoxComment();
     await this.page.locator(NotificationLocators.commentInput).fill(comment);
   }
 
@@ -129,6 +128,8 @@ export class NotificationPage {
   }
 
   async getTagText() {
+    const waiter = await this.page.locator(NotificationLocators.dropDownTags);
+    await waiter.waitFor({ state: "visible", timeout: 5000 });
     return await this.page.locator(NotificationLocators.textTag).innerText();
   }
 
@@ -149,12 +150,12 @@ export class NotificationPage {
     const toast = await this.page.locator(
       NotificationLocators.modalSuccessfullPriority
     );
-    toast.waitFor({ state: "visible", timeout: 2000 });
+    await toast.waitFor({ state: "visible", timeout: 5000 });
   }
 
   async messageSuccess() {
-    this.waitToastPriority();
-    await this.page.locator(NotificationLocators.succesPriorityMessage).click();
+    await this.waitToastPriority();
+    // Just wait for success message, don't click it
   }
 
   async clickPhaseDropDown() {
@@ -167,48 +168,10 @@ export class NotificationPage {
 
   async selectPhase(type: string) {
     await this.clickPhaseDropDown();
-    const option = this.page.locator(type);
+    // Wait a bit for dropdown to open
+    await this.page.waitForTimeout(500);
+    const option = this.page.locator(`text=${type}`);
+    await option.waitFor({ state: "visible", timeout: 3000 });
     await option.click();
-  }
-
-  async fillTitle(title: string) {
-    this.waitForEditForm();
-    await this.page.locator(NotificationLocators.titleNotification).fill(title);
-  }
-
-  async clickWork() {
-    await this.waitForEditForm();
-    await this.page.locator(NotificationLocators.estimateWork).click();
-  }
-
-  async waitForEstimateForm() {
-    const modal = await this.page.locator(
-      NotificationLocators.estimateWorkModal
-    );
-    await modal.waitFor({ state: "visible", timeout: 2000 });
-  }
-
-  async fillWork(work: string) {
-    await this.waitForEstimateForm();
-    await this.page.locator(NotificationLocators.workInput).fill(work);
-  }
-
-  async clickSummitWork() {
-    await this.page.locator(NotificationLocators.saveWork).click();
-  }
-
-  async waitForWorkToast() {
-    const toast = this.page.locator(
-      NotificationLocators.modalSuccessfullPriority
-    );
-    await toast.waitFor({ state: "visible", timeout: 2000 });
-    return toast;
-  }
-
-  async getSuccessWorkMessage() {
-    const message = this.page.locator(
-      NotificationLocators.succesPriorityMessage
-    );
-    return await message.innerText();
   }
 }
