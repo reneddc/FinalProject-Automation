@@ -12,6 +12,7 @@ export const NotificationLocators = {
   confirmationButton: 'button[type="submit"]',
   moreButton: 'button[title="More"]',
   setReminderButton: '//button[@title="Set reminder"]',
+  optionParticularDateTime: '//button[@aria-label="At a particular date/time"]',
   successMesageReminderContainer:
     '//div[@class="Banner flash Banner--success flash-success"]',
   successMessage: '//p[@class="Banner-title"]',
@@ -19,6 +20,7 @@ export const NotificationLocators = {
     '//div[@class="spot-modal op-reminder-dialog-modal"]',
   createReminderButton:
     '//button[@class="Button--primary Button--medium Button"]',
+  removeReminderButton: '//button[@title="Remove reminder"]',
   activityOption:
     '//div[@class="op-work-package-details-tab-component d-flex flex-row"]//li[2]',
   commentEmptyField: ".color-fg-muted.text-normal",

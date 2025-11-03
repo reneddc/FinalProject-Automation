@@ -66,9 +66,15 @@ export class NotificationPage {
     await banner.waitFor({ state: "visible", timeout: 5000 });
   }
 
-  getSuccessReminderLocator() {
-    // Retornar el locator del texto del mensaje
-    return this.page.locator(NotificationLocators.successMessage);
+  async selectSimpleReminder(optionName: string) {
+    const menu = this.page.getByRole("menu", { name: "Set a reminder" });
+    await menu.waitFor({ state: "visible", timeout: 5000 });
+    const option = this.page.getByRole("menuitem", { name: optionName });
+    await option.click();
+  }
+
+  async getSuccessReminderLocator() {
+    return await this.page.locator(NotificationLocators.successMessage);
   }
 
   async waitForModalReminderCreation() {
@@ -81,6 +87,19 @@ export class NotificationPage {
   async clickConfirmReminder() {
     await this.waitForModalReminderCreation();
     await this.page.locator(NotificationLocators.createReminderButton).click();
+  }
+
+  async clickRemoveReminderButton() {
+    await this.waitForModalReminderCreation();
+    const removeButton = this.page
+      .getByRole("dialog", { name: "Edit reminder" })
+      .getByRole("button", { name: "Remove reminder" });
+    await removeButton.click();
+  }
+
+  async clickConfirmRemoval() {
+    await this.waitForConfirmationButton();
+    await this.page.locator(NotificationLocators.confirmationButton).click();
   }
 
   async clickActivity() {
