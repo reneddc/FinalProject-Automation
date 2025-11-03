@@ -1,4 +1,4 @@
-import { mergeTests } from "@playwright/test";
+import { expect, mergeTests } from "@playwright/test";
 import { test as loggedInTest } from "../../fixtures/LoggedInFixture";
 import { test as notificationPage } from "../../fixtures/NotificationsPageFixture";
 
@@ -15,9 +15,10 @@ test("TC010: Verify a comment can be posted in the activity of the notification"
   await notificationPage.waitForEditForm();
   await notificationPage.clickActivity();
   await notificationPage.clickTextFieldComment();
-  const expectedComment = "Automated comment from Playwright test";
+  const expectedComment = "This is a comment from TC010";
   await notificationPage.fillTextComment(expectedComment);
   await notificationPage.summitComment();
-  const actualComment = await notificationPage.getLatestCommentText();
-  await test.expect(actualComment).toContain(expectedComment);
+  const latestCommentLocator =
+    notificationPage.getLatestCommentLocator(expectedComment);
+  await expect(latestCommentLocator).toContainText(expectedComment);
 });

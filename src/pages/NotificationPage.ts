@@ -110,11 +110,8 @@ export class NotificationPage {
     await this.page.locator(NotificationLocators.summitComment).click();
   }
 
-  async getLatestCommentText() {
-    const commentElement = this.page
-      .locator(NotificationLocators.latestActivityCommentText)
-      .first();
-    return await commentElement.innerText();
+  getLatestCommentLocator(expectedText: string) {
+    return this.page.locator(`p.op-uc-p:has-text("${expectedText}")`).first();
   }
 
   async clickDropDownTag() {
