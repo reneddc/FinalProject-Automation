@@ -38,7 +38,6 @@ test.describe("Reminder Creation and Cleanup (TC011)", () => {
     await notificationPage.clickFirstNotification();
     await notificationPage.clickSetReminderButton();
     await notificationPage.selectSimpleReminder(reminder_option);
-    await notificationPage.clickConfirmReminder();
     const successMessageLocator =
       await notificationPage.getSuccessReminderLocator();
     await expect(successMessageLocator).toBeVisible();

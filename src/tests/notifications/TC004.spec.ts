@@ -13,7 +13,7 @@ test("TC004: Verify that priority in a notification can be updated successfully"
   await notificationPage.waitForNotificationContainer();
   await notificationPage.clickAllButton();
   await notificationPage.clickFirstNotification();
-  await notificationPage.clickPriorityLabel();
+  //await notificationPage.clickPriorityLabel();
   await notificationPage.selectPriority(newPriority);
   const successToast = await notificationPage.getSuccessPopUpMessage();
   await expect(successToast).toBeVisible();

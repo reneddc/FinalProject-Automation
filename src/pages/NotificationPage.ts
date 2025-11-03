@@ -2,6 +2,8 @@ import { Page } from "@playwright/test";
 import { NotificationLocators } from "../locators/NotificationLocators";
 
 export class NotificationPage {
+  private readonly timeWaiter = 5000;
+
   constructor(public page: Page) {}
 
   async goTo() {
@@ -16,7 +18,7 @@ export class NotificationPage {
     const container = await this.page.locator(
       NotificationLocators.allContainer
     );
-    await container.waitFor({ state: "visible", timeout: 5000 });
+    await container.waitFor({ state: "visible", timeout: this.timeWaiter });
   }
 
   async clickAllButton() {
@@ -30,7 +32,7 @@ export class NotificationPage {
 
   async waitForEditForm() {
     const edit = this.page.locator(NotificationLocators.editForm);
-    await edit.waitFor({ state: "visible", timeout: 10000 });
+    await edit.waitFor({ state: "visible", timeout: this.timeWaiter });
   }
 
   async clickMoreButton() {
@@ -46,7 +48,7 @@ export class NotificationPage {
     const confirmation = await this.page.locator(
       NotificationLocators.confirmationButton
     );
-    await confirmation.waitFor({ state: "visible", timeout: 5000 });
+    await confirmation.waitFor({ state: "visible", timeout: this.timeWaiter });
   }
 
   async clickConfirmationButton() {
@@ -63,12 +65,12 @@ export class NotificationPage {
     const banner = await this.page.locator(
       NotificationLocators.successMesageReminderContainer
     );
-    await banner.waitFor({ state: "visible", timeout: 5000 });
+    await banner.waitFor({ state: "visible", timeout: this.timeWaiter });
   }
 
   async selectSimpleReminder(optionName: string) {
     const menu = this.page.getByRole("menu", { name: "Set a reminder" });
-    await menu.waitFor({ state: "visible", timeout: 5000 });
+    await menu.waitFor({ state: "visible", timeout: this.timeWaiter });
     const option = this.page.getByRole("menuitem", { name: optionName });
     await option.click();
   }
@@ -81,7 +83,7 @@ export class NotificationPage {
     const modal = await this.page.locator(
       NotificationLocators.modalSetReminderContainer
     );
-    await modal.waitFor({ state: "visible", timeout: 5000 });
+    await modal.waitFor({ state: "visible", timeout: this.timeWaiter });
   }
 
   async clickConfirmReminder() {
@@ -114,7 +116,7 @@ export class NotificationPage {
 
   async waitForTextBoxComment() {
     const comment = this.page.locator(NotificationLocators.commentInput);
-    await comment.waitFor({ state: "visible", timeout: 5000 });
+    await comment.waitFor({ state: "visible", timeout: this.timeWaiter });
   }
 
   async fillTextComment(comment: string) {
@@ -143,8 +145,8 @@ export class NotificationPage {
     const successToast = this.page.locator(
       NotificationLocators.succesPriorityToast
     );
-    await successToast.waitFor({ state: "visible", timeout: 5000 });
-    await successToast.waitFor({ state: "hidden", timeout: 5000 });
+    await successToast.waitFor({ state: "visible", timeout: this.timeWaiter });
+    await successToast.waitFor({ state: "hidden", timeout: this.timeWaiter });
   }
 
   async selectResetTag() {
@@ -156,7 +158,7 @@ export class NotificationPage {
 
   async getTagText() {
     const waiter = await this.page.locator(NotificationLocators.dropDownTags);
-    await waiter.waitFor({ state: "visible", timeout: 5000 });
+    await waiter.waitFor({ state: "visible", timeout: this.timeWaiter });
     return await this.page.locator(NotificationLocators.textTag).innerText();
   }
 
@@ -169,30 +171,30 @@ export class NotificationPage {
     const successToast = this.page.locator(
       NotificationLocators.succesPriorityToast
     );
-    await successToast.waitFor({ state: "visible", timeout: 10000 });
-    await successToast.waitFor({ state: "hidden", timeout: 5000 });
+    await successToast.waitFor({ state: "visible", timeout: this.timeWaiter });
+    await successToast.waitFor({ state: "hidden", timeout: this.timeWaiter });
   }
 
   async selectPriority(type: string) {
     const dropdownInput = await this.page.locator(
       NotificationLocators.priorityDropDown
     );
-    await dropdownInput.waitFor({ state: "visible", timeout: 5000 });
+    await dropdownInput.waitFor({ state: "visible", timeout: this.timeWaiter });
     await dropdownInput.fill(type);
-    await this.page.waitForTimeout(5000);
     await this.page.keyboard.press("ArrowDown");
     await this.page.keyboard.press("Enter");
-    await dropdownInput.waitFor({ state: "hidden", timeout: 5000 });
+    await this.page.locator("body").click({ position: { x: 10, y: 10 } });
+    await dropdownInput.waitFor({ state: "hidden", timeout: this.timeWaiter });
   }
 
   async closeSuccessToast() {
     const closeButton = this.page.locator(
       NotificationLocators.closeToastButton
     );
-    await closeButton.waitFor({ state: "visible", timeout: 5000 });
+    await closeButton.waitFor({ state: "visible", timeout: this.timeWaiter });
     await closeButton.click();
     const alert = this.page.getByRole("alert", { name: "Successful update." });
-    await alert.waitFor({ state: "hidden", timeout: 5000 });
+    await alert.waitFor({ state: "hidden", timeout: this.timeWaiter });
   }
 
   async getSuccessPopUpMessage() {
@@ -215,7 +217,7 @@ export class NotificationPage {
 
   async getProjectPhaseText() {
     const element = this.page.locator(NotificationLocators.projectPhaseText);
-    await element.waitFor({ state: "visible", timeout: 5000 });
+    await element.waitFor({ state: "visible", timeout: this.timeWaiter });
     return await element.innerText();
   }
 
