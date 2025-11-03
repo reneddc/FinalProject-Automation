@@ -16,6 +16,7 @@ export const NotificationLocators = {
   successMesageReminderContainer:
     '//div[@class="Banner flash Banner--success flash-success"]',
   successMessage: '//p[@class="Banner-title"]',
+  closeToastButton: 'button[title="Close popup"]',
   modalSetReminderContainer:
     '//div[@class="spot-modal op-reminder-dialog-modal"]',
   createReminderButton:

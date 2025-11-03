@@ -18,7 +18,8 @@ test("TC010: Verify a comment can be posted in the activity of the notification"
   const expectedComment = "This is a comment from TC010";
   await notificationPage.fillTextComment(expectedComment);
   await notificationPage.summitComment();
-  const latestCommentLocator =
-    notificationPage.getLatestCommentLocator(expectedComment);
+  const latestCommentLocator = await notificationPage.getLatestCommentLocator(
+    expectedComment
+  );
   await expect(latestCommentLocator).toContainText(expectedComment);
 });

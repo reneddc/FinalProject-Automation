@@ -126,7 +126,7 @@ export class NotificationPage {
     await this.page.locator(NotificationLocators.summitComment).click();
   }
 
-  getLatestCommentLocator(expectedText: string) {
+  async getLatestCommentLocator(expectedText: string) {
     return this.page.locator(`p.op-uc-p:has-text("${expectedText}")`).first();
   }
 
@@ -137,14 +137,21 @@ export class NotificationPage {
 
   async selectOnHoldTag() {
     await this.page.locator(NotificationLocators.optionOnHold).click();
+    await this.confirmTagUpdate();
+  }
+  async confirmTagUpdate() {
+    const successToast = this.page.locator(
+      NotificationLocators.succesPriorityToast
+    );
+    await successToast.waitFor({ state: "visible", timeout: 5000 });
+    await successToast.waitFor({ state: "hidden", timeout: 5000 });
   }
 
-  async selectOriginalTag() {
-    const tagName = await this.page.locator(NotificationLocators.dropDownTags)
-      .innerText;
-    await this.page
-      .locator(NotificationLocators.dropDownTags)
-      .selectOption(`text=${tagName}`);
+  async selectResetTag() {
+    await this.clickDropDownTag();
+    const resetOption = this.page.locator('//button[@aria-label="New"]');
+    await resetOption.click();
+    await this.confirmTagUpdate();
   }
 
   async getTagText() {
@@ -158,6 +165,14 @@ export class NotificationPage {
     await this.page.locator(NotificationLocators.priorityLabel).dblclick();
   }
 
+  async confirmPriorityUpdate() {
+    const successToast = this.page.locator(
+      NotificationLocators.succesPriorityToast
+    );
+    await successToast.waitFor({ state: "visible", timeout: 10000 });
+    await successToast.waitFor({ state: "hidden", timeout: 5000 });
+  }
+
   async selectPriority(type: string) {
     const dropdownInput = await this.page.locator(
       NotificationLocators.priorityDropDown
@@ -168,6 +183,16 @@ export class NotificationPage {
     await this.page.keyboard.press("ArrowDown");
     await this.page.keyboard.press("Enter");
     await dropdownInput.waitFor({ state: "hidden", timeout: 5000 });
+  }
+
+  async closeSuccessToast() {
+    const closeButton = this.page.locator(
+      NotificationLocators.closeToastButton
+    );
+    await closeButton.waitFor({ state: "visible", timeout: 5000 });
+    await closeButton.click();
+    const alert = this.page.getByRole("alert", { name: "Successful update." });
+    await alert.waitFor({ state: "hidden", timeout: 5000 });
   }
 
   async getSuccessPopUpMessage() {
@@ -192,6 +217,10 @@ export class NotificationPage {
     const element = this.page.locator(NotificationLocators.projectPhaseText);
     await element.waitFor({ state: "visible", timeout: 5000 });
     return await element.innerText();
+  }
+
+  async revertPhaseToInitializing() {
+    await this.selectPhase("Initiating");
   }
 
   async pressTab(count: number) {

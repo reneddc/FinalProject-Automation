@@ -7,7 +7,6 @@ const test = mergeTests(loggedInTest, notificationPage);
 test("TC004: Verify that priority in a notification can be updated successfully", async ({
   notificationPage,
 }) => {
-  const timeWaiter = 5000;
   const newPriority = "High";
   await notificationPage.goTo();
   await notificationPage.clickNotificationButton();
