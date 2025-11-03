@@ -15,7 +15,9 @@ test("TC010: Verify a comment can be posted in the activity of the notification"
   await notificationPage.waitForEditForm();
   await notificationPage.clickActivity();
   await notificationPage.clickTextFieldComment();
-  const comment = "Automated comment from Playwright test";
-  await notificationPage.fillTextComment(comment);
+  const expectedComment = "Automated comment from Playwright test";
+  await notificationPage.fillTextComment(expectedComment);
   await notificationPage.summitComment();
+  const actualComment = await notificationPage.getLatestCommentText();
+  await test.expect(actualComment).toContain(expectedComment);
 });

@@ -11,9 +11,10 @@ test("TC005: Verify that project phase in a notification can be updated successf
 }) => {
   await notificationPage.goTo();
   await notificationPage.clickNotificationButton();
-  await notificationPage.waitForNotificationContainer();
   await notificationPage.clickAllButton();
   await notificationPage.clickFirstNotification();
   await notificationPage.waitForEditForm();
-  await notificationPage.selectPhase("Development");
+  await notificationPage.selectPhase("Planning");
+  const newPhase = await notificationPage.getProjectPhaseText();
+  expect(newPhase).toEqual("Planning");
 });

@@ -24,6 +24,7 @@ export const NotificationLocators = {
   commentEmptyField: ".color-fg-muted.text-normal",
   commentInput: 'div[role="textbox"]',
   summitComment: 'button[value="Submit"]',
+  latestActivityCommentText: ".activity-item-container .comment-body",
   dropDownTags: ".button--icon.icon-small.icon-pulldown",
   inicialTag: 'button[title="New"]',
   optionOnHold: '//button[@aria-label="On hold"]',
@@ -34,7 +35,9 @@ export const NotificationLocators = {
   priorityDisplayValue:
     'span.inline-edit--display-field[data-field-name="priority"]',
   succesPriorityToast: ".-success.op-toast",
-  projectPhaseDropDown: '.span[aria-label="Project phase No value: Edit"]',
+  projectPhaseDropDown:
+    '//span[contains(@aria-label, "Project phase") and contains(@aria-label, "Edit")]',
+  projectPhaseText: '//span[contains(@aria-label, "Project phase")]',
   editForm: '//*[@id="content-body"]/opce-notification-center',
   estimateWork: '//span[@aria-label="Work No value: Edit"]',
   workInput: '//input[@id="work_package_estimated_hours"]',

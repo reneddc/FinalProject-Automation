@@ -110,6 +110,13 @@ export class NotificationPage {
     await this.page.locator(NotificationLocators.summitComment).click();
   }
 
+  async getLatestCommentText() {
+    const commentElement = this.page
+      .locator(NotificationLocators.latestActivityCommentText)
+      .first();
+    return await commentElement.innerText();
+  }
+
   async clickDropDownTag() {
     await this.waitForEditForm();
     await this.page.locator(NotificationLocators.dropDownTags).click();
@@ -164,10 +171,14 @@ export class NotificationPage {
 
   async selectPhase(type: string) {
     await this.clickPhaseDropDown();
-    await this.page.waitForTimeout(500);
-    const option = this.page.locator(`text=${type}`);
-    await option.waitFor({ state: "visible", timeout: 3000 });
+    const option = this.page.getByRole("option", { name: type, exact: true });
     await option.click();
+  }
+
+  async getProjectPhaseText() {
+    const element = this.page.locator(NotificationLocators.projectPhaseText);
+    await element.waitFor({ state: "visible", timeout: 5000 });
+    return await element.innerText();
   }
 
   async pressTab(count: number) {
