@@ -5,24 +5,18 @@ import { test as meetingsPage } from "../../fixtures/MeetingsPageFixture";
 
 const test = mergeTests(loggedInTest, meetingsPage);
 
-test("TC006 Verify one-time meeting creation and deletion", async ({
+test("TC008 Verify cancel button works correctly in one-time meeting creation", async ({
   meetingsPage,
 }) => {
   await meetingsPage.goTo();
   await (await meetingsPage.getAddMeetingButton()).click();
   await (await meetingsPage.getOneTimeButton()).click();
   await meetingsPage.selectProjectByIndex("Demo project");
-  await meetingsPage.fillTitle("Meeting Title");
-  await (await meetingsPage.getCreateOneTimeMeetingButton()).click();
-  await meetingsPage.goTo();
-  await meetingsPage.page.reload({ waitUntil: "load" });
-  expect(await meetingsPage.getMeetingCreated("Meeting Title")).toBeVisible();
-  await (await meetingsPage.getMeetingCreatedOptions("Meeting Title")).click();
-  await (await meetingsPage.getDeleteButton()).click();
-  await (await meetingsPage.getDeleteConfirmatioButton()).click();
+  await meetingsPage.fillTitle("Meeting Title Cancel");
+  await (await meetingsPage.getCancelMeetingButton()).click();
   await meetingsPage.page.waitForLoadState("networkidle");
   await meetingsPage.page.reload({ waitUntil: "load" });
   expect(
-    await meetingsPage.getMeetingCreated("Meeting Title")
+    await meetingsPage.getMeetingCreated("Meeting Title Cancel")
   ).not.toBeVisible();
 });

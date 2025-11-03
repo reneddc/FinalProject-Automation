@@ -31,8 +31,12 @@ export class MeetingsPage {
     await this.page.getByRole("option").filter({ hasText: projectName }).click();
   }
 
-  async getCreateMeetingButton() {
+  async getCreateOneTimeMeetingButton() {
     return this.page.getByText("Create meeting", { exact: true });
+  }
+
+  async getCreateRecurringMeetingButton() {
+    return this.page.getByText("Create meeting series", { exact: true });
   }
 
   async getMeetingCreated(meetingTitle: string) {
@@ -50,4 +54,42 @@ export class MeetingsPage {
    async getDeleteConfirmatioButton() {
     return this.page.getByText("Delete", { exact: true });  
   }
+
+  async getRecurringMeetingCreated(recMeetingTitle: string) {
+    return this.page.locator(MeetingsLocators.sideMeetingsMenuButtons).filter({ hasText: recMeetingTitle });
+  }
+
+  async getRecurringMeetingTitle() {
+    return this.page.locator(MeetingsLocators.recurringMeetingTitle);
+  }
+
+  async getRecurringMeetingOptionsButton() {
+    return this.page.locator(MeetingsLocators.recurringMeetingOptionsButton);
+  }
+
+  async getDeleteSeriesButton() {
+    return this.page.getByText("Delete meeting series", { exact: true }).nth(1);  
+  }
+
+  async getCheckConfirmationButton() {
+    return this.page.locator(MeetingsLocators.checkDeleteConfirmationButton);
+  }
+
+  async getDeletePermanentlyButton() {
+    return this.page.getByText("Delete permanently", { exact: true });  
+  }
+
+  async getCancelMeetingButton() {
+    return this.page.getByText("Cancel", { exact: true });
+  }
+
+  async getTitleErrorMessage() {
+    return this.page.locator(MeetingsLocators.errorMessage).filter({ hasText: "Title can't be blank." });
+  }
+
+  async getProjectErrorMessage() {
+    return this.page.locator(MeetingsLocators.errorMessage).filter({ hasText: "Project can't be blank." });
+  }
 }
+
+
