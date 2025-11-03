@@ -14,8 +14,11 @@ export const NotificationLocators = {
   closeToastButton: 'button[title="Close popup"]',
   modalSetReminderContainer:
     '//div[@class="spot-modal op-reminder-dialog-modal"]',
+  modalEditReminderContainer: ".spot-modal.op-reminder-dialog-modal",
   createReminderButton:
     '//button[@class="Button--primary Button--medium Button"]',
+  removeReminderButton:
+    '//button[@class="Button--danger Button--medium Button"]',
   activityOption:
     '//div[@class="op-work-package-details-tab-component d-flex flex-row"]//li[2]',
   commentEmptyField: ".color-fg-muted.text-normal",

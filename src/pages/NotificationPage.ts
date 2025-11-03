@@ -65,7 +65,7 @@ export class NotificationPage {
     const banner = await this.page.locator(
       NotificationLocators.successMesageReminderContainer
     );
-    await banner.waitFor({ state: "visible", timeout: this.timeWaiter });
+    await banner.waitFor({ state: "visible", timeout: 10000 });
   }
 
   async selectSimpleReminder(optionName: string) {
@@ -76,12 +76,20 @@ export class NotificationPage {
   }
 
   async getSuccessReminderLocator() {
-    return await this.page.locator(NotificationLocators.successMessage);
+    return await this.page.locator(
+      NotificationLocators.successMesageReminderContainer
+    );
   }
 
   async waitForModalReminderCreation() {
     const modal = await this.page.locator(
       NotificationLocators.modalSetReminderContainer
+    );
+    await modal.waitFor({ state: "visible", timeout: this.timeWaiter });
+  }
+  async waitForModalReminderEdit() {
+    const modal = await this.page.locator(
+      NotificationLocators.modalEditReminderContainer
     );
     await modal.waitFor({ state: "visible", timeout: this.timeWaiter });
   }
@@ -92,11 +100,8 @@ export class NotificationPage {
   }
 
   async clickRemoveReminderButton() {
-    await this.waitForModalReminderCreation();
-    const removeButton = this.page
-      .getByRole("dialog", { name: "Edit reminder" })
-      .getByRole("button", { name: "Remove reminder" });
-    await removeButton.click();
+    await this.waitForModalReminderEdit();
+    await this.page.locator(NotificationLocators.removeReminderButton).click();
   }
 
   async clickConfirmRemoval() {
@@ -171,8 +176,7 @@ export class NotificationPage {
     const successToast = this.page.locator(
       NotificationLocators.succesPriorityToast
     );
-    await successToast.waitFor({ state: "visible", timeout: this.timeWaiter });
-    await successToast.waitFor({ state: "hidden", timeout: this.timeWaiter });
+    await successToast.waitFor({ state: "visible", timeout: 10000 });
   }
 
   async selectPriority(type: string) {
@@ -181,10 +185,20 @@ export class NotificationPage {
     );
     await dropdownInput.waitFor({ state: "visible", timeout: this.timeWaiter });
     await dropdownInput.fill(type);
-    await this.page.keyboard.press("ArrowDown");
-    await this.page.keyboard.press("Enter");
-    await this.page.locator("body").click({ position: { x: 10, y: 10 } });
-    await dropdownInput.waitFor({ state: "hidden", timeout: this.timeWaiter });
+    const priorityOption = this.page
+      .getByRole("option", {
+        name: type,
+        exact: true,
+      })
+      .first();
+    await priorityOption.waitFor({
+      state: "visible",
+      timeout: this.timeWaiter,
+    });
+    await priorityOption.click();
+    //await this.page.keyboard.press("ArrowDown");
+    //await this.page.keyboard.press("Enter");
+    await this.confirmPriorityUpdate();
   }
 
   async closeSuccessToast() {

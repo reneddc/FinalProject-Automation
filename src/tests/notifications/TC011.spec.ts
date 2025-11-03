@@ -3,6 +3,7 @@ import { test as loggedInTest } from "../../fixtures/LoggedInFixture";
 import { test as notificationPage } from "../../fixtures/NotificationsPageFixture";
 
 const test = mergeTests(loggedInTest, notificationPage);
+
 test.describe("Reminder Creation and Cleanup (TC011)", () => {
   const reminder_option = "Tomorrow";
 
@@ -15,6 +16,7 @@ test.describe("Reminder Creation and Cleanup (TC011)", () => {
       await notificationPage.clickFirstNotification();
       await notificationPage.clickSetReminderButton();
       await notificationPage.clickRemoveReminderButton();
+      await notificationPage.waitForReminderSuccess();
       const successMessageLocator =
         await notificationPage.getSuccessReminderLocator();
       await expect(successMessageLocator).toBeVisible();
@@ -38,6 +40,8 @@ test.describe("Reminder Creation and Cleanup (TC011)", () => {
     await notificationPage.clickFirstNotification();
     await notificationPage.clickSetReminderButton();
     await notificationPage.selectSimpleReminder(reminder_option);
+    await notificationPage.clickConfirmReminder();
+    await notificationPage.waitForReminderSuccess();
     const successMessageLocator =
       await notificationPage.getSuccessReminderLocator();
     await expect(successMessageLocator).toBeVisible();
