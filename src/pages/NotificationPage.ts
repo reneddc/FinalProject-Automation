@@ -66,12 +66,9 @@ export class NotificationPage {
     await banner.waitFor({ state: "visible", timeout: 5000 });
   }
 
-  async getSuccessReminderMessage() {
-    await this.waitForReminderSuccess();
-    return await this.page
-      .locator(NotificationLocators.successMessage)
-      .first()
-      .innerText();
+  getSuccessReminderLocator() {
+    // Retornar el locator del texto del mensaje
+    return this.page.locator(NotificationLocators.successMessage);
   }
 
   async waitForModalReminderCreation() {
