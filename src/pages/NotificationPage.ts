@@ -133,29 +133,25 @@ export class NotificationPage {
     return await this.page.locator(NotificationLocators.textTag).innerText();
   }
 
-  async clickDropDownPriority() {
+  async clickPriorityLabel() {
     await this.waitForEditForm();
-    const element = this.page.locator(NotificationLocators.priorityDropDown);
-    await element.scrollIntoViewIfNeeded(); // asegura visibilidad
-    await element.click();
+    await this.page.locator(NotificationLocators.priorityLabel).dblclick();
   }
 
   async selectPriority(type: string) {
-    await this.clickDropDownPriority();
-    const option = this.page.locator(`text=${type}`);
-    await option.click();
-  }
-
-  async waitToastPriority() {
-    const toast = await this.page.locator(
-      NotificationLocators.modalSuccessfullPriority
+    const dropdownInput = await this.page.locator(
+      NotificationLocators.priorityDropDown
     );
-    await toast.waitFor({ state: "visible", timeout: 5000 });
+    await dropdownInput.waitFor({ state: "visible", timeout: 5000 });
+    await dropdownInput.fill(type);
+    await this.page.waitForTimeout(5000);
+    await this.page.keyboard.press("ArrowDown");
+    await this.page.keyboard.press("Enter");
+    await dropdownInput.waitFor({ state: "hidden", timeout: 5000 });
   }
 
-  async messageSuccess() {
-    await this.waitToastPriority();
-    // Just wait for success message, don't click it
+  async getSuccessPopUpMessage() {
+    return await this.page.locator(NotificationLocators.succesPriorityToast);
   }
 
   async clickPhaseDropDown() {
@@ -168,10 +164,20 @@ export class NotificationPage {
 
   async selectPhase(type: string) {
     await this.clickPhaseDropDown();
-    // Wait a bit for dropdown to open
     await this.page.waitForTimeout(500);
     const option = this.page.locator(`text=${type}`);
     await option.waitFor({ state: "visible", timeout: 3000 });
     await option.click();
+  }
+
+  async pressTab(count: number) {
+    await this.waitForEditForm();
+    const container = this.page.locator(NotificationLocators.editForm);
+    await container.focus();
+    for (let i = 0; i < 3; i++) {
+      await this.page.keyboard.press("Tab");
+      console.log;
+    }
+    await this.page.keyboard.press("Enter");
   }
 }
