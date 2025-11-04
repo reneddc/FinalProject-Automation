@@ -1,5 +1,3 @@
-import { error } from "console";
-
 export const workPackagesLocators = {
   createButton:'.wp-create-button',
   packageTypesContainer: '#types-context-menu',
@@ -13,5 +11,21 @@ export const workPackagesLocators = {
   taskTypeOptionFromTable: '.ng-option.ng-option-marked',
   projectInputFromTable: '//ng-select[@id="" and contains(@class, "ng-select-typeahead")]',
   projectContainerFromTable: 'Options List',
-  workPackageModuleProjectOption: 'Package Module Project'
+  workPackageModuleProjectOption: 'Package Module Project',
+  workPackagesToolbar: '.toolbar-items.hide-when-print',
+  filterButton: '#work-packages-filter-toggle-button',
+  filterByTextInput: '#filter-by-text-input',
+  firstRowInTable: '.results-tbody tr',
+  titleRowInTable: '.wp-table--cell-td.subject.-max.-with-hierarchy',
+  firstRowThreePoints: '.icon.icon-show-more-horizontal',
+  moveToAnotherProjectOption: '.icon-action-menu.icon-move',
+  deletePackageOption: '.icon-action-menu.icon-delete',
+  deleteOption: 'Delete',
+  deleteModal: '#wp_destroy_modal',
+  deleteConfirmButton: 'Delete',
+  generatePDFOption: '.icon-action-menu.icon-export-pdf-with-descriptions',
+  generatePDFModal: '#op-work-package-generate-pdf-dialog',
+  downloadPDFButton: 'Download',
+  successUpdateToaster: '.Banner.flash.Banner--success.flash-success',
+  successDeleteToaster: '.op-toast--wrapper',
 };

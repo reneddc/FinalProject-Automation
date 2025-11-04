@@ -13,7 +13,9 @@ test.describe('Projects - Create', () => {
     await projectsPage.gotoNewProject();
     await projectsPage.fillProjectName(projectName);
     await projectsPage.clickCreateButton();
-    await page.waitForLoadState('networkidle');
+    
+    // Wait for navigation away from /projects/new page
+    await page.waitForURL(url => !url.toString().includes('/projects/new'), { timeout: 10000 });
 
     // Verify project was created - URL should change
     const currentUrl = await projectsPage.getCurrentUrl();
@@ -26,5 +28,3 @@ test.describe('Projects - Create', () => {
     expect(projectVisible).toBe(true);
   });
 });
-
-

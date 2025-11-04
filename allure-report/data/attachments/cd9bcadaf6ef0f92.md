@@ -1,0 +1,215 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e5]: Open link in a new tab
+  - generic [ref=e6]:
+    - banner [ref=e7]:
+      - generic [ref=e8]:
+        - heading "Top Menu" [level=1] [ref=e9]
+        - link "Click here to skip over the menu and go to the content" [ref=e10] [cursor=pointer]:
+          - /url: ""
+          - text: Jump to content
+        - list [ref=e11]:
+          - button "Global modules" [ref=e12] [cursor=pointer]:
+            - img
+          - link "Home" [ref=e14] [cursor=pointer]:
+            - /url: https://automationassuresoft2025ad.openproject.com/
+      - search "Search in automationassuresoft2025ad.openproject.com" [ref=e18]:
+        - button "Search" [ref=e19] [cursor=pointer]:
+          - generic [ref=e21]: 
+        - generic [ref=e24]:
+          - generic [ref=e26]:
+            - generic [ref=e27]: Search in automationassuresoft2025ad.openproject.com
+            - combobox "Search in automationassuresoft2025ad.openproject.com" [ref=e29]
+          - status [ref=e30]
+      - generic [ref=e31]:
+        - link "Buy now" [ref=e33] [cursor=pointer]:
+          - /url: /admin/subscriptions
+          - generic [ref=e35]: Buy now
+        - button "Add…" [ref=e37] [cursor=pointer]:
+          - generic [ref=e38]:
+            - generic:
+              - img
+            - img "Add…" [ref=e40]
+        - generic [ref=e42]:
+          - link "Notifications" [ref=e43] [cursor=pointer]:
+            - /url: /notifications
+            - img
+          - generic [ref=e44]: "3"
+        - button "Help" [ref=e46] [cursor=pointer]:
+          - img
+        - button "automationAD 2025" [ref=e47] [cursor=pointer]:
+          - img "automationAD 2025" [ref=e51]
+    - generic [ref=e52]:
+      - generic [ref=e53]:
+        - heading "Side Menu" [level=1] [ref=e54]
+        - button [ref=e56] [cursor=pointer]:
+          - img [ref=e58]
+        - generic [ref=e60]:
+          - generic [ref=e61]:
+            - generic [ref=e62]:
+              - generic [ref=e66]:
+                - button "All projects " [ref=e67] [cursor=pointer]:
+                  - generic "All projects" [ref=e68]
+                  - generic [ref=e69]: 
+                - generic "This is a focus anchor for modals. Press shift+tab to go back to the modal trigger element."
+              - button "Collapse project menu" [ref=e71] [cursor=pointer]:
+                - img
+            - separator [ref=e72]
+          - list [ref=e73]:
+            - listitem [ref=e74]:
+              - generic [ref=e75]:
+                - link "Go back one menu level" [ref=e76] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e77]
+                - link "Meetings" [ref=e79] [cursor=pointer]:
+                  - /url: https://automationassuresoft2025ad.openproject.com/meetings
+              - list [ref=e80]:
+                - listitem [ref=e81]:
+                  - generic [ref=e84]:
+                    - list [ref=e85]:
+                      - listitem [ref=e86]:
+                        - link "My meetings" [ref=e87] [cursor=pointer]:
+                          - /url: /meetings
+                          - generic [ref=e88]: My meetings
+                      - listitem [ref=e89]:
+                        - link "Recurring meetings" [ref=e90] [cursor=pointer]:
+                          - /url: /meetings?filters=%5B%7B%22type%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%22t%22%5D%7D%7D%5D&sort=start_time
+                          - generic [ref=e91]: Recurring meetings
+                      - listitem [ref=e92]:
+                        - link "All meetings" [ref=e93] [cursor=pointer]:
+                          - /url: /meetings?filters=%5B%7B%22invited_user_id%22%3A%7B%22operator%22%3A%22%2A%22%2C%22values%22%3A%5B%5D%7D%7D%5D
+                          - generic [ref=e94]: All meetings
+                    - generic [ref=e95]:
+                      - button "Meeting series" [ref=e96] [cursor=pointer]:
+                        - text: Meeting series
+                        - generic [ref=e97]: 
+                      - list [ref=e98]:
+                        - listitem [ref=e99]:
+                          - link "Weekly" [ref=e100] [cursor=pointer]:
+                            - /url: /projects/demo-project/recurring_meetings/1
+                            - generic [ref=e101]: Weekly
+                    - generic [ref=e102]:
+                      - button "Involvement" [ref=e103] [cursor=pointer]:
+                        - text: Involvement
+                        - generic [ref=e104]: 
+                      - list [ref=e105]:
+                        - listitem [ref=e106]:
+                          - link "Invitations" [ref=e107] [cursor=pointer]:
+                            - /url: /meetings?filters=%5B%7B%22invited_user_id%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%224%22%5D%7D%7D%5D&sort=start_time
+                            - generic [ref=e108]: Invitations
+                        - listitem [ref=e109]:
+                          - link "Attended" [ref=e110] [cursor=pointer]:
+                            - /url: /meetings?filters=%5B%7B%22attended_user_id%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%224%22%5D%7D%7D%5D&upcoming=false
+                            - generic [ref=e111]: Attended
+                        - listitem [ref=e112]:
+                          - link "Created by me" [ref=e113] [cursor=pointer]:
+                            - /url: /meetings?filters=%5B%7B%22author_id%22%3A%7B%22operator%22%3A%22%3D%22%2C%22values%22%3A%5B%224%22%5D%7D%7D%5D
+                            - generic [ref=e114]: Created by me
+          - generic [ref=e116]:
+            - img [ref=e118]
+            - generic [ref=e121]:
+              - generic [ref=e122]: 7 days left of premium trial token
+              - paragraph [ref=e124]: You have access to all Premium enterprise plan features.
+              - link "Buy now" [ref=e128] [cursor=pointer]:
+                - /url: /admin/subscriptions
+                - generic [ref=e130]: Buy now
+      - main [ref=e131]:
+        - generic [ref=e132]:
+          - heading "Content" [level=1] [ref=e133]
+          - generic [ref=e134]:
+            - generic [ref=e135]:
+              - navigation "Breadcrumb" [ref=e137]:
+                - list [ref=e138]:
+                  - listitem [ref=e139]:
+                    - link "automationassuresoft2025ad.openproject.com" [ref=e140] [cursor=pointer]:
+                      - /url: /
+                  - listitem [ref=e141]:
+                    - link "Meetings" [ref=e142] [cursor=pointer]:
+                      - /url: /meetings
+                  - listitem [ref=e143]:
+                    - link "My meetings" [ref=e144]:
+                      - /url: "#"
+              - heading "My meetings" [level=2] [ref=e146]
+            - generic [ref=e147]:
+              - generic [ref=e148]:
+                - button "Filters ( 1 )" [ref=e151] [cursor=pointer]:
+                  - generic [ref=e152]:
+                    - generic [ref=e153]: Filters
+                    - generic:
+                      - generic:
+                        - generic: "1"
+                      - generic:
+                        - text: (
+                        - generic "1"
+                        - text: )
+                - list "Date/Time" [ref=e155]:
+                  - listitem [ref=e156]:
+                    - link "Upcoming" [ref=e157] [cursor=pointer]:
+                      - /url: /meetings?upcoming=true
+                      - generic [ref=e158]:
+                        - generic:
+                          - img
+                        - generic [ref=e159]: Upcoming
+                  - listitem [ref=e160]:
+                    - link "Past" [ref=e161] [cursor=pointer]:
+                      - /url: /meetings?upcoming=false
+                      - generic [ref=e162]:
+                        - generic:
+                          - img
+                        - generic [ref=e163]: Past
+              - button "New Meeting" [ref=e166] [cursor=pointer]:
+                - generic [ref=e167]:
+                  - generic:
+                    - img
+                  - generic [ref=e168]: Meeting
+                - generic:
+                  - img
+              - generic:
+                - generic:       
+            - heading "Today" [level=3] [ref=e169]
+            - generic [ref=e170]:
+              - generic [ref=e171]:
+                - generic [ref=e172]: Title
+                - generic [ref=e173]: Date and time
+                - generic [ref=e174]: Project
+                - generic [ref=e175]: Duration
+                - generic [ref=e176]: Location
+              - list "Title Date and time Project Duration Location" [ref=e177]:
+                - listitem [ref=e178]:
+                  - generic [ref=e179]:
+                    - link "Meeting Title" [ref=e181] [cursor=pointer]:
+                      - /url: /projects/demo-project/meetings/58
+                    - generic [ref=e182]: 11/04/2025 10:00 AM
+                    - link "Demo project" [ref=e184] [cursor=pointer]:
+                      - /url: /projects/demo-project
+                    - generic [ref=e185]: 1 hour
+                    - button "More" [ref=e189] [cursor=pointer]:
+                      - img
+            - heading "Later this week" [level=3] [ref=e190]
+            - generic [ref=e191]:
+              - generic [ref=e192]:
+                - generic [ref=e193]: Title
+                - generic [ref=e194]: Date and time
+                - generic [ref=e195]: Project
+                - generic [ref=e196]: Duration
+                - generic [ref=e197]: Location
+              - list "Title Date and time Project Duration Location" [ref=e198]:
+                - listitem [ref=e199]:
+                  - generic [ref=e200]:
+                    - generic [ref=e201]:
+                      - link "Weekly" [ref=e202] [cursor=pointer]:
+                        - /url: /projects/demo-project/meetings/12
+                      - link "Every week" [ref=e203] [cursor=pointer]:
+                        - /url: /projects/demo-project/recurring_meetings/1
+                        - generic [ref=e204]:
+                          - img [ref=e205]
+                          - text: Every week
+                    - generic [ref=e207]: 11/06/2025 01:09 AM
+                    - link "Demo project" [ref=e209] [cursor=pointer]:
+                      - /url: /projects/demo-project
+                    - generic [ref=e210]: 1 hour
+                    - button "More" [ref=e214] [cursor=pointer]:
+                      - img
+```

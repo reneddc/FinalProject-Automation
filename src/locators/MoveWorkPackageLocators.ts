@@ -1,5 +1,3 @@
-import { error } from "console";
-
 export const moveWorkPackageLocators = {
   moveForm:'#move_form',
   projectDropdown:'#new_project_id',
