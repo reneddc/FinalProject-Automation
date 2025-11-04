@@ -1,5 +1,3 @@
-import { error } from "console";
-
 export const workPackagesLocators = {
   createButton:'.wp-create-button',
   packageTypesContainer: '#types-context-menu',
@@ -13,5 +11,10 @@ export const workPackagesLocators = {
   taskTypeOptionFromTable: '.ng-option.ng-option-marked',
   projectInputFromTable: '//ng-select[@id="" and contains(@class, "ng-select-typeahead")]',
   projectContainerFromTable: 'Options List',
-  workPackageModuleProjectOption: 'Package Module Project'
+  workPackageModuleProjectOption: 'Package Module Project',
+  workPackagesToolbar: '.toolbar-items.hide-when-print',
+  filterButton: '#work-packages-filter-toggle-button',
+  filterByTextInput: '#filter-by-text-input',
+  firstRowInTable: '.results-tbody tr',
+  titleRowInTable: '.wp-table--cell-td.subject.-max.-with-hierarchy',
 };

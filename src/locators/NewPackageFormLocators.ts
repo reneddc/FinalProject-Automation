@@ -1,4 +1,4 @@
-export const newPackagePopUpLocators = {
+export const newPackageFormLocators = {
   formContainer:'.work-packages-partitioned-page--content-right',
   taskNameInput:'#wp-new-inline-edit--field-subject',
   selectProjectInput:'Search', 
@@ -11,6 +11,6 @@ export const newPackagePopUpLocators = {
   attachmentFileInput: '#attachment_files',
   attachementLoadedContainer: '.spot-list--item-action.spot-list--item-action_link.op-file-list--item-action',
   saveButton: '#work-packages--edit-actions-save',
-  closePopUpButton: '.spot-link.work-packages--details-close-icon',
+  closeFormButton: '.spot-link.work-packages--details-close-icon',
   fileUploadedStatusToaster: '.-upload.op-toast'
 };

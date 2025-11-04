@@ -1,10 +1,11 @@
 import { Page } from "@playwright/test";
 import { workPackagesLocators } from "../locators/WorkPackagesLocators"
+import { time } from "console";
 
 export class WorkPackagesPage {
   constructor(public page: Page) {}
 
-  async clickAddWorkPackageButton(timeWaiter:number) {
+  async clickCreateWorkPackageButton(timeWaiter:number) {
     const createButton = this.page.locator(workPackagesLocators.createButton);
     await createButton.waitFor({ state: "visible", timeout: timeWaiter });
     createButton.click();
@@ -59,5 +60,26 @@ export class WorkPackagesPage {
 
   async selectProjectOptionFromTable(){
     await this.page.getByText(workPackagesLocators.workPackageModuleProjectOption).click();
+  }
+
+  async waitForWorkPackagesTable(timeWaiter:number){
+    await this.page.locator(workPackagesLocators.workPackagesToolbar).waitFor({ state: "visible", timeout: timeWaiter });
+  }
+
+  async  clickFilterButton(){
+    await this.page.locator(workPackagesLocators.filterButton).click();
+  }
+
+  async fillWorkPackagesFilterByTaskName(taskName:string, timeWaiter:number){
+    const filterInput = this.page.locator(workPackagesLocators.filterByTextInput);
+    await filterInput.waitFor({ state: "visible", timeout: timeWaiter });
+    await filterInput.fill(taskName);
+    await this.page.waitForTimeout(5000);
+  }
+
+  async getWorkPackageCreatedRow(timeWaiter:number):Promise<any>{
+    const firstRowInTable = this.page.locator(workPackagesLocators.firstRowInTable);
+    await firstRowInTable.waitFor({ state: "visible", timeout: timeWaiter });
+    return firstRowInTable;
   }
 }
