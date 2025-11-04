@@ -13,8 +13,8 @@ dotenv.config();
 
 test("TC021: Verify work package creation with valid values from PACKAGE table", async ({headerComponent, lateralMenuComponent, workPackagesPage, newPackageFormPage: newPackagePopUpComponent, searchResultsPage}) => {
   const timeWaiter = 5000;
-  const taskName = "Task from TC002";
-  const imagePath = "zyro-image.png";
+  const timeStamp = Date.now();
+  const taskName = `TC021: ${timeStamp}`;
   await lateralMenuComponent.waitForMenu(timeWaiter);
   await lateralMenuComponent.clickWorkPackagesOption();
   await workPackagesPage.clickCreateNewWorkPackageButton();
@@ -23,8 +23,9 @@ test("TC021: Verify work package creation with valid values from PACKAGE table",
   await workPackagesPage.clickSelectProjectFromTable();
   await workPackagesPage.waitForProjectsContainerFromTable(timeWaiter);
   await workPackagesPage.selectProjectOptionFromTable();
-  await headerComponent.fillSearchInput(taskName);
-  await searchResultsPage.waitForSearchResultsTable(10000);
-  const isTaskCreatedInTable = await searchResultsPage.isTaskCreatedInTable(taskName);
-  expect(isTaskCreatedInTable).toBeTruthy();
+  await workPackagesPage.clickFilterButton();
+  await workPackagesPage.fillWorkPackagesFilterByTaskName(taskName, timeWaiter);
+  const packageCreated = await workPackagesPage.getWorkPackageCreatedRow(timeWaiter);
+  await expect(packageCreated).toHaveCount(1);
+  await expect(packageCreated).toContainText(taskName);
 });

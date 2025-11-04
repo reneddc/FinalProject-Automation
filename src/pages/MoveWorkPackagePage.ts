@@ -25,4 +25,10 @@ export class MoveWorkPackagePage {
     await activityWorkPackage.waitFor({ state: "visible", timeout: timeWaiter });
     return activityWorkPackage;
   }
+
+  async getSuccesfullUpdateToaster(timeWaiter:number):Promise<any> {
+    const succesfulUpdateToaster = this.page.locator(moveWorkPackageLocators.successUpdateToaster);
+    await succesfulUpdateToaster.waitFor({ state: "visible", timeout: timeWaiter });
+    return succesfulUpdateToaster;
+  }
 }

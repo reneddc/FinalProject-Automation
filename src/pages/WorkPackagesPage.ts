@@ -82,4 +82,14 @@ export class WorkPackagesPage {
     await firstRowInTable.waitFor({ state: "visible", timeout: timeWaiter });
     return firstRowInTable;
   }
+
+  async clickfirstRowThreePoints(){
+    await this.page.locator(workPackagesLocators.firstRowThreePoints).click();
+  }
+
+  async clickMoveToProjectOption(timeWaiter:number){
+    const moveToAnotherProjectOption = this.page.locator(workPackagesLocators.moveToAnotherProjectOption);
+    await moveToAnotherProjectOption.waitFor({ state: "visible", timeout: timeWaiter});
+    moveToAnotherProjectOption.click();
+  }
 }

@@ -17,4 +17,6 @@ export const workPackagesLocators = {
   filterByTextInput: '#filter-by-text-input',
   firstRowInTable: '.results-tbody tr',
   titleRowInTable: '.wp-table--cell-td.subject.-max.-with-hierarchy',
+  firstRowThreePoints: '.icon.icon-show-more-horizontal',
+  moveToAnotherProjectOption: '.icon-action-menu.icon-move',
 };

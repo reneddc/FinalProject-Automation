@@ -5,5 +5,6 @@ export const moveWorkPackageLocators = {
   projectDropdown:'#new_project_id',
   scrumProjectOption:'div.ng-option-label.ellipsis',
   moveAndFollowButton:'Move and follow',
+  successUpdateToaster: '.Banner.flash.Banner--success.flash-success',
   activitySection: '.work-packages-activities-tab-journals-item-component-details--journal-detail-description-container'
 };
