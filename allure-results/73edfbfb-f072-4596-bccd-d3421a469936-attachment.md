@@ -1,0 +1,1082 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - text: 
+  - generic [ref=e5]: Open link in a new tab
+  - generic [ref=e6]:
+    - banner [ref=e7]:
+      - generic [ref=e8]:
+        - heading "Top Menu" [level=1] [ref=e9]
+        - link "Click here to skip over the menu and go to the content" [ref=e10]:
+          - /url: ""
+          - text: Jump to content
+        - list [ref=e11]:
+          - button "Global modules" [ref=e12] [cursor=pointer]:
+            - img
+          - link "Home" [ref=e14]:
+            - /url: https://automationassuresoft2025ad.openproject.com/
+      - search "Search in automationassuresoft2025ad.openproject.com" [ref=e18]:
+        - button "Search" [ref=e19] [cursor=pointer]:
+          - generic [ref=e21]: 
+        - generic [ref=e24]:
+          - generic [ref=e26]:
+            - generic [ref=e27]: Search in automationassuresoft2025ad.openproject.com
+            - combobox "Search in automationassuresoft2025ad.openproject.com" [ref=e29]
+          - status [ref=e30]
+      - generic [ref=e31]:
+        - link "Buy now" [ref=e33] [cursor=pointer]:
+          - /url: /admin/subscriptions
+          - generic [ref=e35]: Buy now
+        - button "Add…" [ref=e37] [cursor=pointer]:
+          - generic [ref=e38]:
+            - generic:
+              - img
+            - img "Add…" [ref=e40]
+        - generic [ref=e42]:
+          - link "Notifications" [ref=e43] [cursor=pointer]:
+            - /url: /notifications
+            - img
+          - generic [ref=e44]: "3"
+        - button "Help" [ref=e46] [cursor=pointer]:
+          - img
+        - button "automationAD 2025" [ref=e47] [cursor=pointer]:
+          - img "automationAD 2025" [ref=e51]
+    - generic [ref=e52]:
+      - generic [ref=e53]:
+        - heading "Side Menu" [level=1] [ref=e54]
+        - button [ref=e56] [cursor=pointer]:
+          - img [ref=e58]
+        - generic [ref=e60]:
+          - generic [ref=e61]:
+            - generic [ref=e62]:
+              - generic [ref=e66]:
+                - button "All projects " [ref=e67] [cursor=pointer]:
+                  - generic "All projects" [ref=e68]
+                  - generic [ref=e69]: 
+                - generic "This is a focus anchor for modals. Press shift+tab to go back to the modal trigger element."
+              - button "Collapse project menu" [ref=e71] [cursor=pointer]:
+                - img
+            - separator [ref=e72]
+          - list [ref=e73]:
+            - listitem [ref=e74]:
+              - generic [ref=e77]:
+                - list [ref=e78]:
+                  - listitem [ref=e79]:
+                    - link "Inbox 3" [ref=e80]:
+                      - /url: /notifications
+                      - img [ref=e81]
+                      - generic [ref=e83]: Inbox
+                      - generic [ref=e84]: "3"
+                - generic [ref=e85]:
+                  - button "Reason" [ref=e86] [cursor=pointer]:
+                    - text: Reason
+                    - generic [ref=e87]: 
+                  - list [ref=e88]:
+                    - listitem [ref=e89]:
+                      - link "Mentioned" [ref=e90]:
+                        - /url: /notifications?filter=reason&name=mentioned
+                        - img [ref=e91]
+                        - generic [ref=e93]: Mentioned
+                    - listitem [ref=e94]:
+                      - link "Assignee" [ref=e95]:
+                        - /url: /notifications?filter=reason&name=assigned
+                        - img [ref=e96]
+                        - generic [ref=e98]: Assignee
+                    - listitem [ref=e99]:
+                      - link "Accountable" [ref=e100]:
+                        - /url: /notifications?filter=reason&name=responsible
+                        - img [ref=e101]
+                        - generic [ref=e103]: Accountable
+                    - listitem [ref=e104]:
+                      - link "Watcher" [ref=e105]:
+                        - /url: /notifications?filter=reason&name=watched
+                        - img [ref=e106]
+                        - generic [ref=e108]: Watcher
+                    - listitem [ref=e109]:
+                      - link "Date alert 1" [ref=e110]:
+                        - /url: /notifications?filter=reason&name=dateAlert
+                        - img [ref=e111]
+                        - generic [ref=e113]: Date alert
+                        - generic [ref=e114]: "1"
+                    - listitem [ref=e115]:
+                      - link "Reminder 2" [ref=e116]:
+                        - /url: /notifications?filter=reason&name=reminder
+                        - img [ref=e117]
+                        - generic [ref=e120]: Reminder
+                        - generic [ref=e121]: "2"
+                    - listitem [ref=e122]:
+                      - link "Shared" [ref=e123]:
+                        - /url: /notifications?filter=reason&name=shared
+                        - img [ref=e124]
+                        - generic [ref=e126]: Shared
+                - generic [ref=e127]:
+                  - button "Unread by project" [ref=e128] [cursor=pointer]:
+                    - text: Unread by project
+                    - generic [ref=e129]: 
+                  - list [ref=e130]:
+                    - listitem [ref=e131]:
+                      - link "Demo project 3" [ref=e132]:
+                        - /url: /notifications?filter=project&name=1
+                        - generic [ref=e133]: Demo project
+                        - generic [ref=e134]: "3"
+          - generic [ref=e136]:
+            - img [ref=e138]
+            - generic [ref=e141]:
+              - generic [ref=e142]: 7 days left of premium trial token
+              - paragraph [ref=e144]: You have access to all Premium enterprise plan features.
+              - link "Buy now" [ref=e148] [cursor=pointer]:
+                - /url: /admin/subscriptions
+                - generic [ref=e150]: Buy now
+      - main [ref=e151]:
+        - generic [ref=e152]:
+          - heading "Content" [level=1] [ref=e153]
+          - generic [ref=e154]:
+            - generic [ref=e155]:
+              - navigation "Breadcrumb" [ref=e157]:
+                - list [ref=e158]:
+                  - listitem [ref=e159]:
+                    - link "automationassuresoft2025ad.openproject.com" [ref=e160]:
+                      - /url: /
+                  - listitem [ref=e161]:
+                    - link "Notifications" [ref=e162]:
+                      - /url: /notifications
+                  - listitem [ref=e163]:
+                    - link "Inbox" [ref=e164]:
+                      - /url: "#"
+              - generic [ref=e165]:
+                - heading "Inbox" [level=2] [ref=e166]
+                - link "Notification settings" [ref=e168] [cursor=pointer]:
+                  - /url: /my/notifications
+                  - generic [ref=e169]:
+                    - generic:
+                      - img
+                    - generic [ref=e170]: Settings
+            - generic [ref=e171]:
+              - list "Filters" [ref=e174]:
+                - listitem [ref=e175]:
+                  - link "Unread" [ref=e176] [cursor=pointer]:
+                    - /url: /notifications
+                    - generic [ref=e177]:
+                      - generic:
+                        - img
+                      - generic [ref=e178]: Unread
+                - listitem [ref=e179]:
+                  - link "All" [ref=e180] [cursor=pointer]:
+                    - /url: /notifications?facet=all
+                    - generic [ref=e181]:
+                      - generic:
+                        - img
+                      - generic [ref=e182]: All
+              - link "Mark all as read" [ref=e184] [cursor=pointer]:
+                - /url: /notifications/mark_all_read
+                - generic [ref=e185]:
+                  - generic:
+                    - img
+                  - generic [ref=e186]: Mark all as read
+          - generic [ref=e192]:
+            - generic [ref=e194] [cursor=pointer]:
+              - generic [ref=e195]:
+                - generic [ref=e198]: New
+                - link "#7" [ref=e199]:
+                  - /url: /work_packages/7
+                - generic [ref=e200]:
+                  - text: "-"
+                  - link "Demo project" [ref=e201]:
+                    - /url: /projects/1
+                  - text: "-"
+                - generic [ref=e202]:
+                  - generic [ref=e203]: Date alert,
+                  - generic [ref=e204]: Reminder
+                - generic [ref=e205]: "3"
+                - generic [ref=e206]:
+                  - generic "Mark as read" [ref=e207]: 
+                  - generic [ref=e208]: 
+              - generic [ref=e209]:
+                - generic [ref=e210]: Task
+                - generic [ref=e211]: Invite attendees to conference
+              - generic [ref=e214]: Overdue since 3 days.
+            - generic [ref=e216] [cursor=pointer]:
+              - generic [ref=e217]:
+                - generic [ref=e220]: New
+                - link "#8" [ref=e221]:
+                  - /url: /work_packages/8
+                - generic [ref=e222]:
+                  - text: "-"
+                  - link "Demo project" [ref=e223]:
+                    - /url: /projects/1
+                  - text: "-"
+                - generic [ref=e224]:
+                  - generic [ref=e225]: Date alert,
+                  - generic [ref=e226]: Reminder
+                - generic [ref=e227]: "2"
+                - generic [ref=e228]:
+                  - generic "Mark as read" [ref=e229]: 
+                  - generic [ref=e230]: 
+              - generic [ref=e231]:
+                - generic [ref=e232]: Task
+                - generic [ref=e233]: Setup conference website
+              - generic [ref=e236]: Start date was 3 days ago.
+            - generic [ref=e238] [cursor=pointer]:
+              - generic [ref=e239]:
+                - generic [ref=e242]: In progress
+                - link "#2" [ref=e243]:
+                  - /url: /work_packages/2
+                - generic [ref=e244]:
+                  - text: "-"
+                  - link "Demo project" [ref=e245]:
+                    - /url: /projects/1
+                  - text: "-"
+                - generic [ref=e247]: Date alert
+                - generic [ref=e248]: "1"
+                - generic [ref=e249]:
+                  - generic "Mark as read" [ref=e250]: 
+                  - generic [ref=e251]: 
+              - generic [ref=e252]:
+                - generic [ref=e253]: Summary task
+                - generic [ref=e254]: Organize open source conference
+              - generic [ref=e256]: Start date was 3 days ago.
+            - generic [ref=e258] [cursor=pointer]:
+              - generic [ref=e259]:
+                - generic [ref=e262]: New
+                - link "#6" [ref=e263]:
+                  - /url: /work_packages/6
+                - generic [ref=e264]:
+                  - text: "-"
+                  - link "Demo project" [ref=e265]:
+                    - /url: /projects/1
+                  - text: "-"
+                - generic [ref=e267]: Date alert
+                - generic [ref=e268]: 
+              - generic [ref=e269]:
+                - generic [ref=e270]: Task
+                - generic [ref=e271]: Create sponsorship brochure and hand-outs
+              - generic [ref=e273]: Overdue since 4 days.
+            - generic [ref=e275] [cursor=pointer]:
+              - generic [ref=e276]:
+                - generic [ref=e279]: In progress
+                - link "#3" [ref=e280]:
+                  - /url: /work_packages/3
+                - generic [ref=e281]:
+                  - text: "-"
+                  - link "Demo project" [ref=e282]:
+                    - /url: /projects/1
+                  - text: "-"
+                - generic [ref=e284]: Date alert
+                - generic [ref=e285]: 
+              - generic [ref=e286]:
+                - generic [ref=e287]: Task
+                - generic [ref=e288]: Set date and location of conference
+              - generic [ref=e290]: Overdue since 4 days.
+          - generic [ref=e294]:
+            - generic [ref=e296]:
+              - generic "Scroll left" [ref=e298] [cursor=pointer]:
+                - img
+              - navigation "Tabs" [ref=e300]:
+                - list [ref=e301]:
+                  - listitem [ref=e302]:
+                    - link "Overview" [ref=e303] [cursor=pointer]:
+                      - /url: /notifications/details/7?facet=all
+                      - generic [ref=e304]: Overview
+                  - listitem [ref=e305]:
+                    - link "Activity 1" [ref=e306] [cursor=pointer]:
+                      - /url: /notifications/details/7/activity?facet=all
+                      - generic [ref=e307]: Activity
+                      - generic "1" [ref=e308]
+                  - listitem [ref=e309]:
+                    - link "Files" [ref=e310] [cursor=pointer]:
+                      - /url: /notifications/details/7/files?facet=all
+                      - generic [ref=e311]: Files
+                  - listitem [ref=e312]:
+                    - link "Relations 3" [ref=e313] [cursor=pointer]:
+                      - /url: /notifications/details/7/relations?facet=all
+                      - generic [ref=e314]: Relations
+                      - generic "3" [ref=e315]
+                  - listitem [ref=e316]:
+                    - link "Watchers" [ref=e317] [cursor=pointer]:
+                      - /url: /notifications/details/7/watchers?facet=all
+                      - generic [ref=e318]: Watchers
+                  - listitem [ref=e319]:
+                    - link "Meetings" [ref=e320] [cursor=pointer]:
+                      - /url: /notifications/details/7/meetings?facet=all
+                      - generic [ref=e321]: Meetings
+              - generic "Scroll right" [ref=e323] [cursor=pointer]:
+                - img
+              - link "Show fullscreen view" [ref=e325] [cursor=pointer]:
+                - /url: /work_packages/7/activity
+                - img
+              - link "Close" [ref=e327] [cursor=pointer]:
+                - /url: /notifications?facet=all
+                - img
+            - generic [ref=e330]:
+              - generic [ref=e333]:
+                - generic [ref=e335]:
+                  - list [ref=e338]:
+                    - listitem [ref=e339]: "Parent:"
+                    - listitem [ref=e340]:
+                      - generic [ref=e341]:
+                        - link "Organize open source conference" [ref=e342]:
+                          - /url: /work_packages/2
+                        - button "Change parent" [ref=e343] [cursor=pointer]:
+                          - generic [ref=e345]: 
+                        - button "Remove parent" [ref=e346] [cursor=pointer]:
+                          - generic [ref=e348]: 
+                  - generic [ref=e350]:
+                    - 'button "Type Task: Edit" [ref=e355]': Task
+                    - 'button "Subject Invite attendees to conference: Edit" [ref=e360]': Invite attendees to conference
+                - generic [ref=e367]:
+                  - generic [ref=e370]:
+                    - button "Show everything" [ref=e373] [cursor=pointer]:
+                      - generic [ref=e375]: Show everything
+                      - generic:
+                        - img
+                    - button "Newest on top" [ref=e378] [cursor=pointer]:
+                      - generic [ref=e380]: Newest on top
+                      - generic:
+                        - img
+                  - generic [ref=e381]:
+                    - generic [ref=e386]:
+                      - generic "commented" [ref=e391]:
+                        - generic [ref=e393]:
+                          - generic [ref=e394]:
+                            - img "automationAD 2025" [ref=e397]
+                            - link "automationAD 2025" [ref=e399]:
+                              - /url: /users/4
+                            - link "11/03/2025 11:58 PM" [ref=e401]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-349
+                          - button "Actions" [ref=e405] [cursor=pointer]:
+                            - img
+                        - generic [ref=e408]:
+                          - paragraph [ref=e411]: This is a comment from TC010
+                          - button "Add reaction" [ref=e415] [cursor=pointer]:
+                            - img
+                      - generic "commented" [ref=e423]:
+                        - generic [ref=e425]:
+                          - generic [ref=e426]:
+                            - img "automationAD 2025" [ref=e429]
+                            - link "automationAD 2025" [ref=e431]:
+                              - /url: /users/4
+                            - link "11/03/2025 11:58 PM" [ref=e433]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-344
+                          - button "Actions" [ref=e437] [cursor=pointer]:
+                            - img
+                        - generic [ref=e440]:
+                          - paragraph [ref=e443]: This is a comment from TC010
+                          - button "Add reaction" [ref=e447] [cursor=pointer]:
+                            - img
+                      - generic [ref=e453]:
+                        - generic "commented" [ref=e455]:
+                          - generic [ref=e457]:
+                            - generic [ref=e458]:
+                              - img "automationAD 2025" [ref=e461]
+                              - link "automationAD 2025" [ref=e463]:
+                                - /url: /users/4
+                              - link "11/03/2025 11:57 PM" [ref=e465]:
+                                - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-337
+                            - button "Actions" [ref=e469] [cursor=pointer]:
+                              - img
+                          - generic [ref=e472]:
+                            - paragraph [ref=e475]: This is a comment from TC010
+                            - button "Add reaction" [ref=e479] [cursor=pointer]:
+                              - img
+                        - generic [ref=e486]:
+                          - strong [ref=e487]: Project phase
+                          - text: changed from Initiating to Planning
+                      - generic [ref=e490]:
+                        - generic "commented" [ref=e492]:
+                          - generic [ref=e494]:
+                            - generic [ref=e495]:
+                              - img "automationAD 2025" [ref=e498]
+                              - link "automationAD 2025" [ref=e500]:
+                                - /url: /users/4
+                              - link "11/03/2025 11:36 PM" [ref=e502]:
+                                - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-332
+                            - button "Actions" [ref=e506] [cursor=pointer]:
+                              - img
+                          - generic [ref=e509]:
+                            - paragraph [ref=e512]: This is a comment from TC010
+                            - button "Add reaction" [ref=e516] [cursor=pointer]:
+                              - img
+                        - generic [ref=e523]:
+                          - strong [ref=e524]: Priority
+                          - text: changed from Low to High
+                      - generic [ref=e530]:
+                        - generic [ref=e532]:
+                          - img "changed" [ref=e534]
+                          - img "automationAD 2025" [ref=e538]
+                          - link "automationAD 2025" [ref=e540]:
+                            - /url: /users/4
+                          - link "11/03/2025 10:14 PM" [ref=e542]:
+                            - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-277
+                        - generic [ref=e546]:
+                          - strong [ref=e547]: Priority
+                          - text: changed from High to Low
+                      - generic "commented" [ref=e552]:
+                        - generic [ref=e554]:
+                          - generic [ref=e555]:
+                            - img "automationAD 2025" [ref=e558]
+                            - link "automationAD 2025" [ref=e560]:
+                              - /url: /users/4
+                            - link "11/03/2025 10:04 PM" [ref=e562]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-254
+                          - button "Actions" [ref=e566] [cursor=pointer]:
+                            - img
+                        - generic [ref=e569]:
+                          - paragraph [ref=e572]: This is a comment from TC010
+                          - button "Add reaction" [ref=e576] [cursor=pointer]:
+                            - img
+                      - generic "commented" [ref=e584]:
+                        - generic [ref=e586]:
+                          - generic [ref=e587]:
+                            - img "automationAD 2025" [ref=e590]
+                            - link "automationAD 2025" [ref=e592]:
+                              - /url: /users/4
+                            - link "11/03/2025 09:48 PM" [ref=e594]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-231
+                          - button "Actions" [ref=e598] [cursor=pointer]:
+                            - img
+                        - generic [ref=e601]:
+                          - paragraph [ref=e604]: This is a comment from TC010
+                          - button "Add reaction" [ref=e608] [cursor=pointer]:
+                            - img
+                      - generic "commented" [ref=e616]:
+                        - generic [ref=e618]:
+                          - generic [ref=e619]:
+                            - img "automationAD 2025" [ref=e622]
+                            - link "automationAD 2025" [ref=e624]:
+                              - /url: /users/4
+                            - link "11/03/2025 04:51 PM" [ref=e626]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-212
+                          - button "Actions" [ref=e630] [cursor=pointer]:
+                            - img
+                        - generic [ref=e631]: The changes were retracted.
+                      - generic "commented" [ref=e639]:
+                        - generic [ref=e641]:
+                          - generic [ref=e642]:
+                            - img "automationAD 2025" [ref=e645]
+                            - link "automationAD 2025" [ref=e647]:
+                              - /url: /users/4
+                            - link "11/03/2025 04:41 PM" [ref=e649]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-203
+                          - button "Actions" [ref=e653] [cursor=pointer]:
+                            - img
+                        - generic [ref=e656]:
+                          - paragraph [ref=e659]: This is a comment from TC010
+                          - button "Add reaction" [ref=e663] [cursor=pointer]:
+                            - img
+                      - generic "commented" [ref=e671]:
+                        - generic [ref=e673]:
+                          - generic [ref=e674]:
+                            - img "automationAD 2025" [ref=e677]
+                            - link "automationAD 2025" [ref=e679]:
+                              - /url: /users/4
+                            - link "11/03/2025 01:15 PM" [ref=e681]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-197
+                          - button "Actions" [ref=e685] [cursor=pointer]:
+                            - img
+                        - generic [ref=e686]: The changes were retracted.
+                      - generic [ref=e695]:
+                        - generic [ref=e697]:
+                          - img "changed" [ref=e699]
+                          - img "automationAD 2025" [ref=e703]
+                          - link "automationAD 2025" [ref=e705]:
+                            - /url: /users/4
+                          - link "11/03/2025 12:39 PM" [ref=e707]:
+                            - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-196
+                        - generic [ref=e711]:
+                          - strong [ref=e712]: Priority
+                          - text: changed from Low to High
+                      - generic [ref=e715]:
+                        - generic "commented" [ref=e717]:
+                          - generic [ref=e719]:
+                            - generic [ref=e720]:
+                              - img "automationAD 2025" [ref=e723]
+                              - link "automationAD 2025" [ref=e725]:
+                                - /url: /users/4
+                              - link "11/03/2025 12:10 PM" [ref=e727]:
+                                - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-195
+                            - button "Actions" [ref=e731] [cursor=pointer]:
+                              - img
+                          - generic [ref=e734]:
+                            - paragraph [ref=e737]: This is a comment from TC010
+                            - button "Add reaction" [ref=e741] [cursor=pointer]:
+                              - img
+                        - generic [ref=e748]:
+                          - strong [ref=e749]: Priority
+                          - text: changed from High to Low
+                      - generic [ref=e755]:
+                        - generic [ref=e757]:
+                          - img "changed" [ref=e759]
+                          - img "automationAD 2025" [ref=e763]
+                          - link "automationAD 2025" [ref=e765]:
+                            - /url: /users/4
+                          - link "11/03/2025 11:52 AM" [ref=e767]:
+                            - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-194
+                        - generic [ref=e771]:
+                          - strong [ref=e772]: Priority
+                          - text: changed from Low to High
+                      - generic [ref=e778]:
+                        - generic [ref=e780]:
+                          - img "changed" [ref=e782]
+                          - img "automationAD 2025" [ref=e786]
+                          - link "automationAD 2025" [ref=e788]:
+                            - /url: /users/4
+                          - link "11/03/2025 11:47 AM" [ref=e790]:
+                            - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-193
+                        - generic [ref=e791]:
+                          - generic [ref=e794]:
+                            - strong [ref=e795]: Priority
+                            - text: changed from Normal to Low
+                          - generic [ref=e798]:
+                            - strong [ref=e799]: Project phase
+                            - text: set to Initiating
+                      - generic [ref=e805]:
+                        - generic [ref=e807]:
+                          - img "changed" [ref=e809]
+                          - img "automationAD 2025" [ref=e813]
+                          - link "automationAD 2025" [ref=e815]:
+                            - /url: /users/4
+                          - link "11/03/2025 11:34 AM" [ref=e817]:
+                            - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-192
+                        - generic [ref=e821]:
+                          - strong [ref=e822]: Priority
+                          - text: changed from Low to Normal
+                      - generic "commented" [ref=e827]:
+                        - generic [ref=e829]:
+                          - generic [ref=e830]:
+                            - img "automationAD 2025" [ref=e833]
+                            - link "automationAD 2025" [ref=e835]:
+                              - /url: /users/4
+                            - link "11/03/2025 11:05 AM" [ref=e837]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-191
+                          - button "Actions" [ref=e841] [cursor=pointer]:
+                            - img
+                        - generic [ref=e842]: The changes were retracted.
+                      - generic "commented" [ref=e850]:
+                        - generic [ref=e852]:
+                          - generic [ref=e853]:
+                            - img "automationAD 2025" [ref=e856]
+                            - link "automationAD 2025" [ref=e858]:
+                              - /url: /users/4
+                            - link "11/03/2025 10:01 AM" [ref=e860]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-190
+                          - button "Actions" [ref=e864] [cursor=pointer]:
+                            - img
+                        - generic [ref=e867]:
+                          - paragraph [ref=e870]: This is a comment from TC010
+                          - button "Add reaction" [ref=e874] [cursor=pointer]:
+                            - img
+                      - generic "commented" [ref=e882]:
+                        - generic [ref=e884]:
+                          - generic [ref=e885]:
+                            - img "automationAD 2025" [ref=e888]
+                            - link "automationAD 2025" [ref=e890]:
+                              - /url: /users/4
+                            - link "11/03/2025 10:00 AM" [ref=e892]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-189
+                          - button "Actions" [ref=e896] [cursor=pointer]:
+                            - img
+                        - generic [ref=e899]:
+                          - paragraph [ref=e902]: Automated comment from Playwright test
+                          - button "Add reaction" [ref=e906] [cursor=pointer]:
+                            - img
+                      - generic "commented" [ref=e914]:
+                        - generic [ref=e916]:
+                          - generic [ref=e917]:
+                            - img "automationAD 2025" [ref=e920]
+                            - link "automationAD 2025" [ref=e922]:
+                              - /url: /users/4
+                            - link "11/03/2025 09:59 AM" [ref=e924]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-188
+                          - button "Actions" [ref=e928] [cursor=pointer]:
+                            - img
+                        - generic [ref=e931]:
+                          - paragraph [ref=e934]: Automated comment from Playwright test
+                          - button "Add reaction" [ref=e938] [cursor=pointer]:
+                            - img
+                      - generic "commented" [ref=e946]:
+                        - generic [ref=e948]:
+                          - generic [ref=e949]:
+                            - img "automationAD 2025" [ref=e952]
+                            - link "automationAD 2025" [ref=e954]:
+                              - /url: /users/4
+                            - link "11/03/2025 09:42 AM" [ref=e956]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-187
+                          - button "Actions" [ref=e960] [cursor=pointer]:
+                            - img
+                        - generic [ref=e963]:
+                          - paragraph [ref=e966]: Automated comment from Playwright test
+                          - button "Add reaction" [ref=e970] [cursor=pointer]:
+                            - img
+                      - generic "commented" [ref=e978]:
+                        - generic [ref=e980]:
+                          - generic [ref=e981]:
+                            - img "automationAD 2025" [ref=e984]
+                            - link "automationAD 2025" [ref=e986]:
+                              - /url: /users/4
+                            - link "11/03/2025 09:41 AM" [ref=e988]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-186
+                          - button "Actions" [ref=e992] [cursor=pointer]:
+                            - img
+                        - generic [ref=e995]:
+                          - paragraph [ref=e998]: Automated comment from Playwright test
+                          - button "Add reaction" [ref=e1002] [cursor=pointer]:
+                            - img
+                      - generic "commented" [ref=e1010]:
+                        - generic [ref=e1012]:
+                          - generic [ref=e1013]:
+                            - img "automationAD 2025" [ref=e1016]
+                            - link "automationAD 2025" [ref=e1018]:
+                              - /url: /users/4
+                            - link "11/03/2025 09:33 AM" [ref=e1020]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-185
+                          - button "Actions" [ref=e1024] [cursor=pointer]:
+                            - img
+                        - generic [ref=e1027]:
+                          - paragraph [ref=e1030]: Automated comment from Playwright test
+                          - button "Add reaction" [ref=e1034] [cursor=pointer]:
+                            - img
+                      - generic "commented" [ref=e1042]:
+                        - generic [ref=e1044]:
+                          - generic [ref=e1045]:
+                            - img "automationAD 2025" [ref=e1048]
+                            - link "automationAD 2025" [ref=e1050]:
+                              - /url: /users/4
+                            - link "11/03/2025 09:32 AM" [ref=e1052]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-184
+                          - button "Actions" [ref=e1056] [cursor=pointer]:
+                            - img
+                        - generic [ref=e1059]:
+                          - paragraph [ref=e1062]: Automated comment from Playwright test
+                          - button "Add reaction" [ref=e1066] [cursor=pointer]:
+                            - img
+                      - generic "commented" [ref=e1074]:
+                        - generic [ref=e1076]:
+                          - generic [ref=e1077]:
+                            - img "automationAD 2025" [ref=e1080]
+                            - link "automationAD 2025" [ref=e1082]:
+                              - /url: /users/4
+                            - link "11/03/2025 09:28 AM" [ref=e1084]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-183
+                          - button "Actions" [ref=e1088] [cursor=pointer]:
+                            - img
+                        - generic [ref=e1091]:
+                          - paragraph [ref=e1094]: dddddddd
+                          - button "Add reaction" [ref=e1098] [cursor=pointer]:
+                            - img
+                      - generic [ref=e1107]:
+                        - generic [ref=e1109]:
+                          - img "changed" [ref=e1111]
+                          - img "automationAD 2025" [ref=e1115]
+                          - link "automationAD 2025" [ref=e1117]:
+                            - /url: /users/4
+                          - link "11/03/2025 08:49 AM" [ref=e1119]:
+                            - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-182
+                        - generic [ref=e1123]:
+                          - strong [ref=e1124]: Priority
+                          - text: changed from Immediate to Low
+                      - generic [ref=e1130]:
+                        - generic [ref=e1132]:
+                          - img "changed" [ref=e1134]
+                          - img "automationAD 2025" [ref=e1138]
+                          - link "automationAD 2025" [ref=e1140]:
+                            - /url: /users/4
+                          - link "11/03/2025 08:33 AM" [ref=e1142]:
+                            - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-181
+                        - generic [ref=e1146]:
+                          - strong [ref=e1147]: Priority
+                          - text: changed from High to Immediate
+                      - generic "commented" [ref=e1152]:
+                        - generic [ref=e1154]:
+                          - generic [ref=e1155]:
+                            - img "automationAD 2025" [ref=e1158]
+                            - link "automationAD 2025" [ref=e1160]:
+                              - /url: /users/4
+                            - link "11/03/2025 08:26 AM" [ref=e1162]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-180
+                          - button "Actions" [ref=e1166] [cursor=pointer]:
+                            - img
+                        - generic [ref=e1167]: The changes were retracted.
+                      - generic [ref=e1176]:
+                        - generic [ref=e1178]:
+                          - img "changed" [ref=e1180]
+                          - img "automationAD 2025" [ref=e1184]
+                          - link "automationAD 2025" [ref=e1186]:
+                            - /url: /users/4
+                          - link "11/03/2025 08:04 AM" [ref=e1188]:
+                            - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-179
+                        - generic [ref=e1192]:
+                          - strong [ref=e1193]: Priority
+                          - text: changed from Low to High
+                      - generic "commented" [ref=e1198]:
+                        - generic [ref=e1200]:
+                          - generic [ref=e1201]:
+                            - img "automationAD 2025" [ref=e1204]
+                            - link "automationAD 2025" [ref=e1206]:
+                              - /url: /users/4
+                            - link "11/03/2025 07:50 AM" [ref=e1208]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-178
+                          - button "Actions" [ref=e1212] [cursor=pointer]:
+                            - img
+                        - generic [ref=e1213]: The changes were retracted.
+                      - generic "commented" [ref=e1221]:
+                        - generic [ref=e1223]:
+                          - generic [ref=e1224]:
+                            - img "automationAD 2025" [ref=e1227]
+                            - link "automationAD 2025" [ref=e1229]:
+                              - /url: /users/4
+                            - link "11/03/2025 07:35 AM" [ref=e1231]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-177
+                          - button "Actions" [ref=e1235] [cursor=pointer]:
+                            - img
+                        - generic [ref=e1236]: The changes were retracted.
+                      - generic [ref=e1242]:
+                        - generic [ref=e1248]:
+                          - generic [ref=e1250]:
+                            - img "changed" [ref=e1252]
+                            - img "automationAD 2025" [ref=e1256]
+                            - link "automationAD 2025" [ref=e1258]:
+                              - /url: /users/4
+                            - link "11/02/2025 07:18 PM" [ref=e1260]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-176
+                          - generic [ref=e1264]:
+                            - strong [ref=e1265]: Priority
+                            - text: changed from Immediate to Low
+                        - generic [ref=e1271]:
+                          - generic [ref=e1273]:
+                            - img "changed" [ref=e1275]
+                            - img "automationAD 2025" [ref=e1279]
+                            - link "automationAD 2025" [ref=e1281]:
+                              - /url: /users/4
+                            - link "11/02/2025 05:52 PM" [ref=e1283]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-175
+                          - generic [ref=e1287]:
+                            - strong [ref=e1288]: Priority
+                            - text: changed from High to Immediate
+                        - generic "commented" [ref=e1293]:
+                          - generic [ref=e1295]:
+                            - generic [ref=e1296]:
+                              - img "automationAD 2025" [ref=e1299]
+                              - link "automationAD 2025" [ref=e1301]:
+                                - /url: /users/4
+                              - link "11/02/2025 11:04 AM" [ref=e1303]:
+                                - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-174
+                            - button "Actions" [ref=e1307] [cursor=pointer]:
+                              - img
+                          - generic [ref=e1310]:
+                            - paragraph [ref=e1313]: gfffgfgfgf
+                            - button "Add reaction" [ref=e1317] [cursor=pointer]:
+                              - img
+                        - generic "commented" [ref=e1325]:
+                          - generic [ref=e1327]:
+                            - generic [ref=e1328]:
+                              - img "automationAD 2025" [ref=e1331]
+                              - link "automationAD 2025" [ref=e1333]:
+                                - /url: /users/4
+                              - link "11/02/2025 11:02 AM" [ref=e1335]:
+                                - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-173
+                            - button "Actions" [ref=e1339] [cursor=pointer]:
+                              - img
+                          - generic [ref=e1342]:
+                            - paragraph [ref=e1345]: Automated comment from Playwright test
+                            - button "Add reaction" [ref=e1349] [cursor=pointer]:
+                              - img
+                        - generic "commented" [ref=e1357]:
+                          - generic [ref=e1359]:
+                            - generic [ref=e1360]:
+                              - img "automationAD 2025" [ref=e1363]
+                              - link "automationAD 2025" [ref=e1365]:
+                                - /url: /users/4
+                              - link "11/02/2025 10:58 AM" [ref=e1367]:
+                                - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-172
+                            - button "Actions" [ref=e1371] [cursor=pointer]:
+                              - img
+                          - generic [ref=e1374]:
+                            - paragraph [ref=e1377]: Automated comment from Playwright test
+                            - button "Add reaction" [ref=e1381] [cursor=pointer]:
+                              - img
+                        - generic "commented" [ref=e1389]:
+                          - generic [ref=e1391]:
+                            - generic [ref=e1392]:
+                              - img "automationAD 2025" [ref=e1395]
+                              - link "automationAD 2025" [ref=e1397]:
+                                - /url: /users/4
+                              - link "11/02/2025 10:55 AM" [ref=e1399]:
+                                - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-171
+                            - button "Actions" [ref=e1403] [cursor=pointer]:
+                              - img
+                          - generic [ref=e1406]:
+                            - paragraph [ref=e1409]: Automated comment from Playwright test
+                            - button "Add reaction" [ref=e1413] [cursor=pointer]:
+                              - img
+                        - generic "commented" [ref=e1421]:
+                          - generic [ref=e1423]:
+                            - generic [ref=e1424]:
+                              - img "automationAD 2025" [ref=e1427]
+                              - link "automationAD 2025" [ref=e1429]:
+                                - /url: /users/4
+                              - link "11/02/2025 10:53 AM" [ref=e1431]:
+                                - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-170
+                            - button "Actions" [ref=e1435] [cursor=pointer]:
+                              - img
+                          - generic [ref=e1438]:
+                            - paragraph [ref=e1441]: Automated comment from Playwright test
+                            - button "Add reaction" [ref=e1445] [cursor=pointer]:
+                              - img
+                        - generic "commented" [ref=e1453]:
+                          - generic [ref=e1455]:
+                            - generic [ref=e1456]:
+                              - img "automationAD 2025" [ref=e1459]
+                              - link "automationAD 2025" [ref=e1461]:
+                                - /url: /users/4
+                              - link "11/02/2025 10:48 AM" [ref=e1463]:
+                                - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-169
+                            - button "Actions" [ref=e1467] [cursor=pointer]:
+                              - img
+                          - generic [ref=e1470]:
+                            - paragraph [ref=e1473]: Automated comment from Playwright test
+                            - button "Add reaction" [ref=e1477] [cursor=pointer]:
+                              - img
+                        - generic "commented" [ref=e1485]:
+                          - generic [ref=e1487]:
+                            - generic [ref=e1488]:
+                              - img "automationAD 2025" [ref=e1491]
+                              - link "automationAD 2025" [ref=e1493]:
+                                - /url: /users/4
+                              - link "11/02/2025 10:48 AM" [ref=e1495]:
+                                - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-168
+                            - button "Actions" [ref=e1499] [cursor=pointer]:
+                              - img
+                          - generic [ref=e1502]:
+                            - paragraph [ref=e1505]: Automated comment from Playwright test
+                            - button "Add reaction" [ref=e1509] [cursor=pointer]:
+                              - img
+                        - generic "commented" [ref=e1517]:
+                          - generic [ref=e1519]:
+                            - generic [ref=e1520]:
+                              - img "automationAD 2025" [ref=e1523]
+                              - link "automationAD 2025" [ref=e1525]:
+                                - /url: /users/4
+                              - link "11/02/2025 10:35 AM" [ref=e1527]:
+                                - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-167
+                            - button "Actions" [ref=e1531] [cursor=pointer]:
+                              - img
+                          - generic [ref=e1534]:
+                            - paragraph [ref=e1537]: Automated comment from Playwright test
+                            - button "Add reaction" [ref=e1541] [cursor=pointer]:
+                              - img
+                        - generic "commented" [ref=e1549]:
+                          - generic [ref=e1551]:
+                            - generic [ref=e1552]:
+                              - img "automationAD 2025" [ref=e1555]
+                              - link "automationAD 2025" [ref=e1557]:
+                                - /url: /users/4
+                              - link "11/02/2025 10:31 AM" [ref=e1559]:
+                                - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-166
+                            - button "Actions" [ref=e1563] [cursor=pointer]:
+                              - img
+                          - generic [ref=e1566]:
+                            - paragraph [ref=e1569]: sfsfdsdffsdfsdfsd
+                            - button "Add reaction" [ref=e1573] [cursor=pointer]:
+                              - img
+                        - generic "commented" [ref=e1581]:
+                          - generic [ref=e1583]:
+                            - generic [ref=e1584]:
+                              - img "automationAD 2025" [ref=e1587]
+                              - link "automationAD 2025" [ref=e1589]:
+                                - /url: /users/4
+                              - link "11/02/2025 10:30 AM" [ref=e1591]:
+                                - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-165
+                            - button "Actions" [ref=e1595] [cursor=pointer]:
+                              - img
+                          - generic [ref=e1598]:
+                            - paragraph [ref=e1601]: Automated comment from Playwright test
+                            - button "Add reaction" [ref=e1605] [cursor=pointer]:
+                              - img
+                        - generic [ref=e1614]:
+                          - generic [ref=e1616]:
+                            - img "changed" [ref=e1618]
+                            - img "automationAD 2025" [ref=e1622]
+                            - link "automationAD 2025" [ref=e1624]:
+                              - /url: /users/4
+                            - link "11/02/2025 09:03 AM" [ref=e1626]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-164
+                          - generic [ref=e1630]:
+                            - strong [ref=e1631]: Status
+                            - text: changed from On hold to New
+                        - generic [ref=e1637]:
+                          - generic [ref=e1639]:
+                            - img "changed" [ref=e1641]
+                            - img "automationAD 2025" [ref=e1645]
+                            - link "automationAD 2025" [ref=e1647]:
+                              - /url: /users/4
+                            - link "11/02/2025 08:16 AM" [ref=e1649]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-163
+                          - generic [ref=e1653]:
+                            - strong [ref=e1654]: Status
+                            - text: changed from New to On hold
+                        - generic [ref=e1660]:
+                          - generic [ref=e1662]:
+                            - img "changed" [ref=e1664]
+                            - img "automationAD 2025" [ref=e1668]
+                            - link "automationAD 2025" [ref=e1670]:
+                              - /url: /users/4
+                            - link "10/31/2025 08:36 AM" [ref=e1672]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-162
+                          - generic [ref=e1676]:
+                            - strong [ref=e1677]: Priority
+                            - text: changed from Normal to High
+                        - generic [ref=e1683]:
+                          - generic [ref=e1685]:
+                            - img "changed" [ref=e1687]
+                            - img "automationAD 2025" [ref=e1691]
+                            - link "automationAD 2025" [ref=e1693]:
+                              - /url: /users/4
+                            - link "10/31/2025 07:12 AM" [ref=e1695]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-161
+                          - generic [ref=e1699]:
+                            - strong [ref=e1700]: Status
+                            - text: changed from On hold to New
+                        - generic "commented" [ref=e1705]:
+                          - generic [ref=e1707]:
+                            - generic [ref=e1708]:
+                              - img "automationAD 2025" [ref=e1711]
+                              - link "automationAD 2025" [ref=e1713]:
+                                - /url: /users/4
+                              - link "10/31/2025 06:00 AM" [ref=e1715]:
+                                - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-157
+                            - button "Actions" [ref=e1719] [cursor=pointer]:
+                              - img
+                          - generic [ref=e1722]:
+                            - paragraph [ref=e1725]: Test comment from playwright
+                            - button "Add reaction" [ref=e1729] [cursor=pointer]:
+                              - img
+                        - generic [ref=e1738]:
+                          - generic [ref=e1740]:
+                            - img "changed" [ref=e1742]
+                            - img "automationAD 2025" [ref=e1746]
+                            - link "automationAD 2025" [ref=e1748]:
+                              - /url: /users/4
+                            - link "10/31/2025 05:54 AM" [ref=e1750]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-155
+                          - generic [ref=e1754]:
+                            - strong [ref=e1755]: Status
+                            - text: changed from New to On hold
+                        - generic "commented" [ref=e1760]:
+                          - generic [ref=e1762]:
+                            - generic [ref=e1763]:
+                              - img "automationAD 2025" [ref=e1766]
+                              - link "automationAD 2025" [ref=e1768]:
+                                - /url: /users/4
+                              - link "10/31/2025 12:39 AM" [ref=e1770]:
+                                - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-123
+                            - button "Actions" [ref=e1774] [cursor=pointer]:
+                              - img
+                          - generic [ref=e1775]: The changes were retracted.
+                        - generic "commented" [ref=e1783]:
+                          - generic [ref=e1785]:
+                            - generic [ref=e1786]:
+                              - img "automationAD 2025" [ref=e1789]
+                              - link "automationAD 2025" [ref=e1791]:
+                                - /url: /users/4
+                              - link "10/31/2025 12:02 AM" [ref=e1793]:
+                                - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-120
+                            - button "Actions" [ref=e1797] [cursor=pointer]:
+                              - img
+                          - generic [ref=e1800]:
+                            - paragraph [ref=e1803]: sfsfsf
+                            - button "Add reaction" [ref=e1807] [cursor=pointer]:
+                              - img
+                        - generic "commented" [ref=e1815]:
+                          - generic [ref=e1817]:
+                            - generic [ref=e1818]:
+                              - img "automationAD 2025" [ref=e1821]
+                              - link "automationAD 2025" [ref=e1823]:
+                                - /url: /users/4
+                              - link "10/31/2025 12:01 AM" [ref=e1825]:
+                                - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-119
+                            - button "Actions" [ref=e1829] [cursor=pointer]:
+                              - img
+                          - generic [ref=e1832]:
+                            - paragraph [ref=e1835]: aasssaas
+                            - button "Add reaction" [ref=e1839] [cursor=pointer]:
+                              - img
+                        - generic "commented" [ref=e1847]:
+                          - generic [ref=e1849]:
+                            - generic [ref=e1850]:
+                              - img "automationAD 2025" [ref=e1853]
+                              - link "automationAD 2025" [ref=e1855]:
+                                - /url: /users/4
+                              - link "10/31/2025 12:00 AM" [ref=e1857]:
+                                - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-118
+                            - button "Actions" [ref=e1861] [cursor=pointer]:
+                              - img
+                          - generic [ref=e1864]:
+                            - paragraph [ref=e1867]: asasa
+                            - button "Add reaction" [ref=e1871] [cursor=pointer]:
+                              - img
+                        - generic "commented" [ref=e1879]:
+                          - generic [ref=e1881]:
+                            - generic [ref=e1882]:
+                              - img "automationAD 2025" [ref=e1885]
+                              - link "automationAD 2025" [ref=e1887]:
+                                - /url: /users/4
+                              - link "10/30/2025 11:44 PM" [ref=e1889]:
+                                - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-117
+                            - button "Actions" [ref=e1893] [cursor=pointer]:
+                              - img
+                          - generic [ref=e1896]:
+                            - paragraph [ref=e1899]: test comment
+                            - button "Add reaction" [ref=e1903] [cursor=pointer]:
+                              - img
+                        - generic [ref=e1912]:
+                          - generic [ref=e1914]:
+                            - img "changed" [ref=e1916]
+                            - img "automationAD 2025" [ref=e1920]
+                            - link "automationAD 2025" [ref=e1922]:
+                              - /url: /users/4
+                            - link "10/30/2025 11:24 PM" [ref=e1924]:
+                              - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-115
+                          - generic [ref=e1925]:
+                            - generic [ref=e1928]:
+                              - strong [ref=e1929]: "% Complete"
+                              - text: set to 20%
+                            - generic [ref=e1932]:
+                              - strong [ref=e1933]: Work
+                              - text: set to 40h
+                            - generic [ref=e1936]:
+                              - strong [ref=e1937]: Remaining work
+                              - text: set to 32h
+                        - generic [ref=e1945]:
+                          - img "created" [ref=e1947]
+                          - generic "Anonymous" [ref=e1951]: A
+                          - link "Anonymous" [ref=e1953]:
+                            - /url: /users/2
+                          - generic [ref=e1954]: created this on
+                          - link "10/28/2025 03:09 PM" [ref=e1956]:
+                            - /url: https://automationassuresoft2025ad.openproject.com/projects/demo-project/work_packages/7/activity#comment-11
+                    - generic [ref=e1962]:
+                      - button "Add a comment. Type @ to notify people." [ref=e1964]:
+                        - generic [ref=e1967]: Add a comment. Type @ to notify people.
+                      - button "Submit comment" [disabled] [ref=e1969]:
+                        - img
+              - generic [ref=e1972]:
+                - button "Watch work package" [ref=e1974] [cursor=pointer]:
+                  - img [ref=e1975]
+                - button "Mark as read" [ref=e1978] [cursor=pointer]:
+                  - img [ref=e1979]
+                - button "Share" [ref=e1982] [cursor=pointer]:
+                  - img [ref=e1983]
+                - button "Set reminder" [ref=e1986] [cursor=pointer]:
+                  - img [ref=e1987]
+                - button "More" [ref=e1990] [cursor=pointer]:
+                  - img [ref=e1991]
+              - generic [ref=e1993]: 
+  - generic:
+    - application:
+      - generic:
+        - generic:
+          - list
+        - generic:
+          - list
+```

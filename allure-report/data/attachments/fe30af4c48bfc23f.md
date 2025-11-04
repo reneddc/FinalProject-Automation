@@ -1,0 +1,53 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e5]: Open link in a new tab
+  - generic [ref=e6]:
+    - banner [ref=e7]:
+      - generic [ref=e8]:
+        - heading "Top Menu" [level=1] [ref=e9]
+        - link "Click here to skip over the menu and go to the content" [ref=e10]:
+          - /url: ""
+          - text: Jump to content
+        - list [ref=e11]:
+          - button "Global modules" [ref=e12] [cursor=pointer]:
+            - img
+          - link "Home" [ref=e14]:
+            - /url: https://automationassuresoft2025ad.openproject.com/
+      - search "Search in automationassuresoft2025ad.openproject.com" [ref=e18]:
+        - button "Search" [ref=e19] [cursor=pointer]:
+          - generic [ref=e21]: 
+        - generic [ref=e24]:
+          - generic [ref=e26]:
+            - generic [ref=e27]: Search in automationassuresoft2025ad.openproject.com
+            - combobox "Search in automationassuresoft2025ad.openproject.com" [ref=e29]
+          - status [ref=e30]
+      - generic [ref=e31]:
+        - button "Help" [ref=e33] [cursor=pointer]:
+          - img
+        - button "Sign in" [ref=e34] [cursor=pointer]:
+          - generic [ref=e35]:
+            - generic [ref=e36]: Sign in
+            - generic:
+              - img
+        - generic: "* *"
+    - main [ref=e38]:
+      - generic [ref=e39]:
+        - heading "Content" [level=1] [ref=e40]
+        - generic [ref=e42]:
+          - heading "Sign in" [level=1] [ref=e43]
+          - separator [ref=e44]
+          - generic [ref=e45]:
+            - generic [ref=e46]:
+              - generic "Username" [ref=e47]: Username*
+              - textbox "Username*" [active] [ref=e50]
+            - generic [ref=e51]:
+              - generic "Password" [ref=e52]: Password*
+              - textbox "Password*" [ref=e55]
+            - generic [ref=e56]:
+              - button "Sign in" [ref=e57] [cursor=pointer]
+              - link "Forgot your password?" [ref=e60]:
+                - /url: /account/lost_password
+          - generic: "* * * * * * "
+```

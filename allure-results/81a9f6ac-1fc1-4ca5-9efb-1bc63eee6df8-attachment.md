@@ -1,0 +1,271 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - text: 
+  - generic [ref=e5]: Open link in a new tab
+  - generic [ref=e6]:
+    - banner [ref=e7]:
+      - generic [ref=e8]:
+        - heading "Top Menu" [level=1] [ref=e9]
+        - link "Click here to skip over the menu and go to the content" [ref=e10]:
+          - /url: ""
+          - text: Jump to content
+        - list [ref=e11]:
+          - button "Global modules" [ref=e12] [cursor=pointer]:
+            - img
+          - link "Home" [ref=e14]:
+            - /url: https://automationassuresoft2025ad.openproject.com/
+      - search "Search in automationassuresoft2025ad.openproject.com" [ref=e18]:
+        - button "Search" [ref=e19] [cursor=pointer]:
+          - generic [ref=e21]: 
+        - generic [ref=e24]:
+          - generic [ref=e26]:
+            - generic [ref=e27]: Search in automationassuresoft2025ad.openproject.com
+            - combobox "Search in automationassuresoft2025ad.openproject.com" [ref=e29]
+          - status [ref=e30]
+      - generic [ref=e31]:
+        - link "Buy now" [ref=e33] [cursor=pointer]:
+          - /url: /admin/subscriptions
+          - generic [ref=e35]: Buy now
+        - button "Add…" [ref=e37] [cursor=pointer]:
+          - generic [ref=e38]:
+            - generic:
+              - img
+            - img "Add…" [ref=e40]
+        - generic [ref=e42]:
+          - link "Notifications" [ref=e43] [cursor=pointer]:
+            - /url: /notifications
+            - img
+          - generic [ref=e44]: "3"
+        - button "Help" [ref=e46] [cursor=pointer]:
+          - img
+        - button "automationAD 2025" [ref=e47] [cursor=pointer]:
+          - img "automationAD 2025" [ref=e51]
+    - generic [ref=e52]:
+      - generic [ref=e53]:
+        - heading "Side Menu" [level=1] [ref=e54]
+        - button [ref=e56] [cursor=pointer]:
+          - img [ref=e58]
+        - generic [ref=e60]:
+          - generic [ref=e61]:
+            - generic [ref=e62]:
+              - generic [ref=e66]:
+                - button "All projects " [ref=e67] [cursor=pointer]:
+                  - generic "All projects" [ref=e68]
+                  - generic [ref=e69]: 
+                - generic "This is a focus anchor for modals. Press shift+tab to go back to the modal trigger element."
+              - button "Collapse project menu" [ref=e71] [cursor=pointer]:
+                - img
+            - separator [ref=e72]
+          - list [ref=e73]:
+            - listitem [ref=e74]:
+              - generic [ref=e77]:
+                - list [ref=e78]:
+                  - listitem [ref=e79]:
+                    - link "Inbox 3" [ref=e80]:
+                      - /url: /notifications
+                      - img [ref=e81]
+                      - generic [ref=e83]: Inbox
+                      - generic [ref=e84]: "3"
+                - generic [ref=e85]:
+                  - button "Reason" [ref=e86] [cursor=pointer]:
+                    - text: Reason
+                    - generic [ref=e87]: 
+                  - list [ref=e88]:
+                    - listitem [ref=e89]:
+                      - link "Mentioned" [ref=e90]:
+                        - /url: /notifications?filter=reason&name=mentioned
+                        - img [ref=e91]
+                        - generic [ref=e93]: Mentioned
+                    - listitem [ref=e94]:
+                      - link "Assignee" [ref=e95]:
+                        - /url: /notifications?filter=reason&name=assigned
+                        - img [ref=e96]
+                        - generic [ref=e98]: Assignee
+                    - listitem [ref=e99]:
+                      - link "Accountable" [ref=e100]:
+                        - /url: /notifications?filter=reason&name=responsible
+                        - img [ref=e101]
+                        - generic [ref=e103]: Accountable
+                    - listitem [ref=e104]:
+                      - link "Watcher" [ref=e105]:
+                        - /url: /notifications?filter=reason&name=watched
+                        - img [ref=e106]
+                        - generic [ref=e108]: Watcher
+                    - listitem [ref=e109]:
+                      - link "Date alert 1" [ref=e110]:
+                        - /url: /notifications?filter=reason&name=dateAlert
+                        - img [ref=e111]
+                        - generic [ref=e113]: Date alert
+                        - generic [ref=e114]: "1"
+                    - listitem [ref=e115]:
+                      - link "Reminder 2" [ref=e116]:
+                        - /url: /notifications?filter=reason&name=reminder
+                        - img [ref=e117]
+                        - generic [ref=e120]: Reminder
+                        - generic [ref=e121]: "2"
+                    - listitem [ref=e122]:
+                      - link "Shared" [ref=e123]:
+                        - /url: /notifications?filter=reason&name=shared
+                        - img [ref=e124]
+                        - generic [ref=e126]: Shared
+                - generic [ref=e127]:
+                  - button "Unread by project" [ref=e128] [cursor=pointer]:
+                    - text: Unread by project
+                    - generic [ref=e129]: 
+                  - list [ref=e130]:
+                    - listitem [ref=e131]:
+                      - link "Demo project 3" [ref=e132]:
+                        - /url: /notifications?filter=project&name=1
+                        - generic [ref=e133]: Demo project
+                        - generic [ref=e134]: "3"
+          - generic [ref=e136]:
+            - img [ref=e138]
+            - generic [ref=e141]:
+              - generic [ref=e142]: 7 days left of premium trial token
+              - paragraph [ref=e144]: You have access to all Premium enterprise plan features.
+              - link "Buy now" [ref=e148] [cursor=pointer]:
+                - /url: /admin/subscriptions
+                - generic [ref=e150]: Buy now
+      - main [ref=e151]:
+        - generic [ref=e152]:
+          - heading "Content" [level=1] [ref=e153]
+          - generic [ref=e154]:
+            - generic [ref=e155]:
+              - navigation "Breadcrumb" [ref=e157]:
+                - list [ref=e158]:
+                  - listitem [ref=e159]:
+                    - link "automationassuresoft2025ad.openproject.com" [ref=e160]:
+                      - /url: /
+                  - listitem [ref=e161]:
+                    - link "Notifications" [ref=e162]:
+                      - /url: /notifications
+                  - listitem [ref=e163]:
+                    - link "Inbox" [ref=e164]:
+                      - /url: "#"
+              - generic [ref=e165]:
+                - heading "Inbox" [level=2] [ref=e166]
+                - link "Notification settings" [ref=e168] [cursor=pointer]:
+                  - /url: /my/notifications
+                  - generic [ref=e169]:
+                    - generic:
+                      - img
+                    - generic [ref=e170]: Settings
+            - generic [ref=e171]:
+              - list "Filters" [ref=e174]:
+                - listitem [ref=e175]:
+                  - link "Unread" [ref=e176] [cursor=pointer]:
+                    - /url: /notifications
+                    - generic [ref=e177]:
+                      - generic:
+                        - img
+                      - generic [ref=e178]: Unread
+                - listitem [ref=e179]:
+                  - link "All" [ref=e180] [cursor=pointer]:
+                    - /url: /notifications?facet=all
+                    - generic [ref=e181]:
+                      - generic:
+                        - img
+                      - generic [ref=e182]: All
+              - link "Mark all as read" [ref=e184] [cursor=pointer]:
+                - /url: /notifications/mark_all_read
+                - generic [ref=e185]:
+                  - generic:
+                    - img
+                  - generic [ref=e186]: Mark all as read
+          - generic [ref=e192]:
+            - generic [ref=e194] [cursor=pointer]:
+              - generic [ref=e195]:
+                - generic [ref=e198]: New
+                - link "#7" [ref=e199]:
+                  - /url: /work_packages/7
+                - generic [ref=e200]:
+                  - text: "-"
+                  - link "Demo project" [ref=e201]:
+                    - /url: /projects/1
+                  - text: "-"
+                - generic [ref=e202]:
+                  - generic [ref=e203]: Date alert,
+                  - generic [ref=e204]: Reminder
+                - generic [ref=e205]: "3"
+                - generic [ref=e206]:
+                  - generic "Mark as read" [ref=e207]: 
+                  - generic [ref=e208]: 
+              - generic [ref=e209]:
+                - generic [ref=e210]: Task
+                - generic [ref=e211]: Invite attendees to conference
+              - generic [ref=e214]: Overdue since 3 days.
+            - generic [ref=e216] [cursor=pointer]:
+              - generic [ref=e217]:
+                - generic [ref=e220]: New
+                - link "#8" [ref=e221]:
+                  - /url: /work_packages/8
+                - generic [ref=e222]:
+                  - text: "-"
+                  - link "Demo project" [ref=e223]:
+                    - /url: /projects/1
+                  - text: "-"
+                - generic [ref=e224]:
+                  - generic [ref=e225]: Date alert,
+                  - generic [ref=e226]: Reminder
+                - generic [ref=e227]: "2"
+                - generic [ref=e228]:
+                  - generic "Mark as read" [ref=e229]: 
+                  - generic [ref=e230]: 
+              - generic [ref=e231]:
+                - generic [ref=e232]: Task
+                - generic [ref=e233]: Setup conference website
+              - generic [ref=e236]: Start date was 3 days ago.
+            - generic [ref=e238] [cursor=pointer]:
+              - generic [ref=e239]:
+                - generic [ref=e242]: In progress
+                - link "#2" [ref=e243]:
+                  - /url: /work_packages/2
+                - generic [ref=e244]:
+                  - text: "-"
+                  - link "Demo project" [ref=e245]:
+                    - /url: /projects/1
+                  - text: "-"
+                - generic [ref=e247]: Date alert
+                - generic [ref=e248]: "1"
+                - generic [ref=e249]:
+                  - generic "Mark as read" [ref=e250]: 
+                  - generic [ref=e251]: 
+              - generic [ref=e252]:
+                - generic [ref=e253]: Summary task
+                - generic [ref=e254]: Organize open source conference
+              - generic [ref=e256]: Start date was 3 days ago.
+            - generic [ref=e258] [cursor=pointer]:
+              - generic [ref=e259]:
+                - generic [ref=e262]: New
+                - link "#6" [ref=e263]:
+                  - /url: /work_packages/6
+                - generic [ref=e264]:
+                  - text: "-"
+                  - link "Demo project" [ref=e265]:
+                    - /url: /projects/1
+                  - text: "-"
+                - generic [ref=e267]: Date alert
+                - generic [ref=e268]: 
+              - generic [ref=e269]:
+                - generic [ref=e270]: Task
+                - generic [ref=e271]: Create sponsorship brochure and hand-outs
+              - generic [ref=e273]: Overdue since 4 days.
+            - generic [ref=e275] [cursor=pointer]:
+              - generic [ref=e276]:
+                - generic [ref=e279]: In progress
+                - link "#3" [ref=e280]:
+                  - /url: /work_packages/3
+                - generic [ref=e281]:
+                  - text: "-"
+                  - link "Demo project" [ref=e282]:
+                    - /url: /projects/1
+                  - text: "-"
+                - generic [ref=e284]: Date alert
+                - generic [ref=e285]: 
+              - generic [ref=e286]:
+                - generic [ref=e287]: Task
+                - generic [ref=e288]: Set date and location of conference
+              - generic [ref=e290]: Overdue since 4 days.
+```
