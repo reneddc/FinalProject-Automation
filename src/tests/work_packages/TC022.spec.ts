@@ -2,12 +2,10 @@ import { mergeTests } from "@playwright/test";
 import { test as workPackagesTest, expect } from "../../fixtures/WorkPackagesPageFixture";
 import { test as loggedInTest } from "../../fixtures/LoggedInFixture";
 import { test as lateralMenuTest } from "../../fixtures/LateralMenuComponentFixture";
-import { test as newPackagePopUpTest } from "../../fixtures/NewPackageFormPageFixture";
-import { test as headerTest } from "../../fixtures/HeaderComponentFixture";
-import { test as searchResultsTest } from "../../fixtures/SearchResultsPageFixture copy";
+import { test as newPackageFormTest } from "../../fixtures/NewPackageFormPageFixture";
 import * as dotenv from "dotenv";
 
-const test = mergeTests(loggedInTest, lateralMenuTest, workPackagesTest, newPackagePopUpTest, headerTest, searchResultsTest);
+const test = mergeTests(loggedInTest, lateralMenuTest, workPackagesTest, newPackageFormTest);
 
 dotenv.config();
 

@@ -3,48 +3,45 @@ import { test as workPackagesTest, expect } from "../../fixtures/WorkPackagesPag
 import { test as loggedInTest } from "../../fixtures/LoggedInFixture";
 import { test as lateralMenuTest } from "../../fixtures/LateralMenuComponentFixture";
 import { test as newPackagePopUpTest } from "../../fixtures/NewPackageFormPageFixture";
-import { test as headerTest } from "../../fixtures/HeaderComponentFixture";
-import { test as searchResultsTest } from "../../fixtures/SearchResultsPageFixture copy";
-import { test as moveWorkPackagesTest } from "../../fixtures/MoveWorkPackagePageFixture";
 import * as dotenv from "dotenv";
 
-const test = mergeTests(loggedInTest, lateralMenuTest, workPackagesTest, newPackagePopUpTest, headerTest, searchResultsTest, moveWorkPackagesTest);
+const test = mergeTests(loggedInTest, lateralMenuTest, workPackagesTest, newPackagePopUpTest);
 
 dotenv.config();
 
-test("TC025: Verify work package PDF download", async ({headerComponent, lateralMenuComponent, workPackagesPage, newPackageFormPage: newPackagePopUpComponent, searchResultsPage, moveWorkPackagesPage}) => {
+test("TC025: Verify work package PDF download", async ({lateralMenuComponent, workPackagesPage, newPackageFormPage}) => {
   const timeWaiter = 5000;
-  const taskName = "Task from TC002";
-  const imagePath = "zyro-image.png";
+  const timeStamp = Date.now();
+  const taskName = `TC023: ${timeStamp}`;
   await lateralMenuComponent.waitForMenu(timeWaiter);
   await lateralMenuComponent.clickWorkPackagesOption();
   await workPackagesPage.clickCreateWorkPackageButton(timeWaiter);
   await workPackagesPage.waitForPackageTypesContainer(timeWaiter);
   await workPackagesPage.clickTaskTypeOption();
-  await newPackagePopUpComponent.waitForFormContainer(timeWaiter);
-  await newPackagePopUpComponent.fillTaskNameInput(taskName);
-  await newPackagePopUpComponent.clickSelectProjectInput();
-  await newPackagePopUpComponent.waitForProjectsContainer(timeWaiter);
-  await newPackagePopUpComponent.selectProjectOption();
-  await newPackagePopUpComponent.clickPriorityDropDown();
-  await newPackagePopUpComponent.waitForPriorityContainer(timeWaiter);
-  await newPackagePopUpComponent.clickNormalPriorityOption();
-  await newPackagePopUpComponent.setAttachmentFile(imagePath);//This is a particular step
-  await newPackagePopUpComponent.waitForFileUploadedToasterClosed(30000);
-  await newPackagePopUpComponent.clickSaveButton();
-  await newPackagePopUpComponent.clickCloseFormButton();
-  await headerComponent.fillSearchInput(taskName);
-  await searchResultsPage.waitForSearchResultsTable(10000);
-  const isTaskCreatedInTable = await searchResultsPage.isTaskCreatedInTable(taskName);
-  expect(isTaskCreatedInTable).toBeTruthy();
-  await searchResultsPage.clickfirstRowThreePoints();
-  await searchResultsPage.clickGeneratePDFOption(timeWaiter);
-  await searchResultsPage.waitForGeneratePDFModal(timeWaiter);
+  await newPackageFormPage.waitForFormContainer(timeWaiter);
+  await newPackageFormPage.fillTaskNameInput(taskName);
+  await newPackageFormPage.clickSelectProjectInput();
+  await newPackageFormPage.waitForProjectsContainer(timeWaiter);
+  await newPackageFormPage.selectProjectOption();
+  await newPackageFormPage.clickPriorityDropDown();
+  await newPackageFormPage.waitForPriorityContainer(timeWaiter);
+  await newPackageFormPage.clickNormalPriorityOption();
+  await newPackageFormPage.clickSaveButton();
+  await newPackageFormPage.waitForTaskCreted(timeWaiter);
+  await newPackageFormPage.clickCloseFormButton();
+  await workPackagesPage.waitForWorkPackagesTable(timeWaiter);
+  await workPackagesPage.clickFilterButton();
+  await workPackagesPage.fillWorkPackagesFilterByTaskName(taskName, timeWaiter);
+  const packageCreated = await workPackagesPage.getWorkPackageCreatedRow(timeWaiter);
+  await expect(packageCreated).toContainText(taskName);
+  await workPackagesPage.clickfirstRowThreePoints();
+  await workPackagesPage.clickGeneratePDFOption(timeWaiter);
+  await workPackagesPage.waitForGeneratePDFModal(timeWaiter);
   const [download] = await Promise.all([
     workPackagesPage.page.waitForEvent('download'),
-    searchResultsPage.clickDownloadPDFButton()
+    workPackagesPage.clickDownloadPDFButton()
   ]);
   const fileName = download.suggestedFilename();
   await download.saveAs(`./downloads/${fileName}`);
-  expect(fileName).toContain(taskName);
+  expect(fileName).toContain(timeStamp.toString());
 });

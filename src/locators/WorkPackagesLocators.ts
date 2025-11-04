@@ -19,4 +19,13 @@ export const workPackagesLocators = {
   titleRowInTable: '.wp-table--cell-td.subject.-max.-with-hierarchy',
   firstRowThreePoints: '.icon.icon-show-more-horizontal',
   moveToAnotherProjectOption: '.icon-action-menu.icon-move',
+  deletePackageOption: '.icon-action-menu.icon-delete',
+  deleteOption: 'Delete',
+  deleteModal: '#wp_destroy_modal',
+  deleteConfirmButton: 'Delete',
+  generatePDFOption: '.icon-action-menu.icon-export-pdf-with-descriptions',
+  generatePDFModal: '#op-work-package-generate-pdf-dialog',
+  downloadPDFButton: 'Download',
+  successUpdateToaster: '.Banner.flash.Banner--success.flash-success',
+  successDeleteToaster: '.op-toast--wrapper',
 };

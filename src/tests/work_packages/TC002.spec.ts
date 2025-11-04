@@ -3,15 +3,13 @@ import { test as workPackagesTest, expect } from "../../fixtures/WorkPackagesPag
 import { test as loggedInTest } from "../../fixtures/LoggedInFixture";
 import { test as lateralMenuTest } from "../../fixtures/LateralMenuComponentFixture";
 import { test as newPackageFormTest } from "../../fixtures/NewPackageFormPageFixture";
-import { test as headerTest } from "../../fixtures/HeaderComponentFixture";
-import { test as searchResultsTest } from "../../fixtures/SearchResultsPageFixture copy";
 import * as dotenv from "dotenv";
 
-const test = mergeTests(loggedInTest, lateralMenuTest, workPackagesTest, newPackageFormTest, headerTest, searchResultsTest);
+const test = mergeTests(loggedInTest, lateralMenuTest, workPackagesTest, newPackageFormTest);
 
 dotenv.config();
 
-test("TC002: Verify work package creation as Task with valid values", async ({headerComponent, lateralMenuComponent, workPackagesPage, newPackageFormPage, searchResultsPage}) => {
+test("TC002: Verify work package creation as Task with valid values", async ({lateralMenuComponent, workPackagesPage, newPackageFormPage}) => {
   const timeWaiter = 5000;
   const timeStamp = Date.now();
   const taskName = `TC002: ${timeStamp}`;
